@@ -1,0 +1,88 @@
+.header_parent {
+  width: 100%;
+  padding: 0px 20px;
+  // margin: 0px 10px;
+  //   background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .left {
+    width: 50%;
+    height: 100%;
+    // background-color: red;
+  }
+  .right {
+    width: 50%;
+    height: 100%;
+    // background-color: yellow;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--trans);
+
+      span {
+        width: 60px;
+        height: 5px;
+        background-color: var(--white);
+        border-radius: 25px;
+      }
+
+      .middle_line {
+        position: absolute;
+        right: -100%;
+        transition: var(--trans);
+        background-color: var(--accent2);
+      }
+
+      &:hover{
+        gap: 15px;
+
+        .middle_line{
+            right: 0;
+        }
+      }
+    }
+  }
+}
+
+.nav_option {
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: var(--accent);
+  z-index: 999;
+  transition: clip-path 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  clip-path: ellipse(50% 100% at right);
+
+  &.active {
+    right: 0;
+    // width: 200%;
+    clip-path: ellipse(85% 100% at 50% 50%); /* Expands to show the menu */
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100%;
+    height: 100%;
+  }
+}
