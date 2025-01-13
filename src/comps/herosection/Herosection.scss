@@ -29,21 +29,9 @@
       }
     }
 
-    .grid-box:hover,
-.grid-box.active {
-  background-color: #00a6e7;
-  font-weight: bold;
-}
-
-.grid-box.active + .grid-box,
-.grid-box.active ~ .grid-box {
-  background-color: rgba(0, 166, 231, 0.3); /* Slight shading for neighbors */
-}
-
-.grid-box.active {
-  background-color: #00a6e7;
-  font-weight: bold;
-}
+    .grid-box.neighbor {
+      background-color: #00a6e73a; /* Faded effect for neighbors */
+    }
   
     .text {
       position: absolute;
