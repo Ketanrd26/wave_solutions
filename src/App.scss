@@ -41,16 +41,6 @@ body {
   // background-color: var(--light-grey);
 }
 
-.App {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-}
-
-[data-scroll-container] {
-  height: auto;
-  min-height: 100%;
-}
 
 .parent {
   width: 100vw;

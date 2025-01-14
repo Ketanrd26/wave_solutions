@@ -6,7 +6,7 @@ import insta_icon from "../../assets/insta_icon.png";
 
 const Herosection = () => {
   const [hoveredBox, setHoveredBox] = useState(null); // Track only the hovered box index
-  const gridSize = 10; // 10x10 grid
+  const gridSize = 32; // 10x10 grid
 
   const calculateNeighborClasses = (index) => {
     if (index === null) return {}; // No hover effect if no box is hovered

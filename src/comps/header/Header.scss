@@ -82,7 +82,7 @@
   }
 
   .overlay {
-    background-color: rgba(0, 0, 0, 0.452);
+    background-color: rgba(0, 0, 0, 0.582);
     width: 100%;
     height: 100%;
     padding: 20px;
@@ -97,12 +97,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      padding: 0px 20px;
+      gap: 20px;
 
       .list {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: var(--unit);
+        gap: calc(var(--unit) * 2);
         flex-direction: column;
 
         .sections {
@@ -111,24 +113,73 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          gap: calc(var(--unit) * 2);
 
-          a {
+          .link {
             font-size: 100px;
             font-family: "Luckiest Guy", serif;
             color: transparent;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: white;
             position: relative;
+            overflow: hidden;
+            line-height: 100%;
+            transition: var(--trans);
 
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background-color: red;
+            &.active {
+              color: var(--white);
             }
+
+            &:hover {
+              color: var(--white);
+
+              + .desc {
+                line-height: 100%;
+              }
+            }
+          }
+
+          .desc {
+            max-width: 20ch;
+            color: var(--white);
+            font-size: calc(var(--unit) * 1.5);
+            line-height: 0px;
+            overflow: hidden;
+            transition: var(--trans);
+          }
+        }
+      }
+
+      .contat_icons{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: var(--unit);
+        padding: 20px 0px;
+
+
+        .mail{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+
+          .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg{
+              font-size: 25px;
+              color: var(--accent2);
+            }
+          }
+
+          p{
+            color: var(--white);
           }
         }
       }
@@ -137,6 +188,72 @@
     .right_nav_section {
       width: 30%;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 10px;
+      position: relative;
+      overflow: hidden;
+
+      .top {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--unit);
+        height: 20%;
+        width: 100%;
+
+        .hamburger {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: var(--trans);
+
+          svg {
+            font-size: 80px;
+            color: var(--white);
+          }
+
+          &:hover{
+            transform: scale(1.2) rotate(10deg);
+          }
+        }
+      }
+
+      .social_links {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 50px;
+        flex-direction: column;
+        position: relative;
+        // display: inline-block;
+        transition: transform 0.2s ease;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          
+          border-radius: 50%;
+          position: relative; /* Essential for GSAP positioning */
+          will-change: transform; /* Improves animation performance */
+          svg {
+            font-size: 35px;
+
+            color: var(--white);
+          }
+
+          &:hover{
+            background-color: var(--accent2);
+          }
+        }
+      }
     }
   }
 }
