@@ -7,7 +7,8 @@ const Home = () => {
     <>
       <Herosection/>
       <TwoCol/>
-    </>
+      
+       </>
   )
 }
 

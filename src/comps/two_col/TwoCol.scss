@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+  }
+  
+  .left-section {
+    position: sticky;
+    top: 0;
+    width: 40%; /* Adjust width as needed */
+    height: 100vh;
+    background-color:red;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right-section {
+    width: 60%; /* Adjust width as needed */
+    padding: 20px;
+  }
+  
+  .content {
+    margin-bottom: 100vh; /* Makes space for scrolling */
+  }
+  
+  .next-section {
+    background-color: #e4e4e4;
+    padding: 20px;
+  }
