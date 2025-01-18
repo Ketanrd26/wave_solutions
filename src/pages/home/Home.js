@@ -50,17 +50,15 @@ const Home = () => {
       <div class="about_us_parent parent">
         <div class="about_us_cont cont">
           <div class="left">
-            <div class="image">
-              
-            </div>
+            <div class="image bg-img-cover"></div>
             <div class="image_sen">
-            <div class="inner">
-                  
-                  </div>
+              <div class="inner">
+                we are <br/>
+                developers
+              </div>
             </div>
-            <div class="image_thi">
-                 
-            </div>
+            <div class="image_thi bg-img-cover"></div>
+            <div class="dotted_img bg-img-cover"></div>
           </div>
           <div class="right">
             <p className="tag">get to know us</p>
