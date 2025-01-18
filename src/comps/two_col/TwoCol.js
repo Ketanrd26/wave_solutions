@@ -7,6 +7,9 @@ import "./TwoCol.scss";
 // images
 
 import digital_marketing from "../../assets/digital_marketing.png";
+import website from "../../assets/website.png";
+import ecomm from "../../assets/e-commerce.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const TwoCol = () => {
@@ -19,7 +22,7 @@ const TwoCol = () => {
     end: "bottom bottom",
     pin: ".left-section",
     pinSpacing: false,
-    markers: true,
+    markers: false,
   });
   const headingRef = useRef(null);
   const secondheadingref = useRef(null);
@@ -37,7 +40,7 @@ const TwoCol = () => {
           start: "top 80%",
           end: "bottom bottom",
           scrub: true,
-          markers: true,
+          markers: false,
         },
       }
     );
@@ -53,13 +56,37 @@ const TwoCol = () => {
           start: "top 80%",
           end: "bottom bottom",
           scrub: true,
-          markers: true,
+          markers: false,
         },
       }
     );
   }, []);
   //
 
+
+  const serviceData = [
+    {
+      image:digital_marketing,
+      serviceName:"Digital",
+      serviceName_hightlight:"Marketing",
+      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque magni ad accusamus dolor? Et!",
+      offer:"instagram + facebook + twitter + linkdein"
+    },
+    {
+      image:website,
+      serviceName:"Website",
+      serviceName_hightlight:"Development",
+      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque magni ad accusamus dolor? Et!",
+      offer:"seo + all device optimization + Custom design"
+    },
+    {
+      image:ecomm,
+      serviceName:"E-Commerce",
+      serviceName_hightlight:"Development",
+      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque magni ad accusamus dolor? Et!",
+      offer:"user authentication + security + admin panel "
+    }
+  ]
   return (
     <>
       <div class="container">
@@ -74,33 +101,29 @@ const TwoCol = () => {
           </p>
         </div>
         <div class="right-section">
-          <div class="content">
-            <div class="content_section">
-              <h1>w</h1>
-              <div class="data">
-                <img src={digital_marketing} alt="" />
-                <h3>Digital <span>
-                Marketing
-                  </span></h3>
 
-                <p className="para" >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  itaque magni ad accusamus dolor? Et!
-                </p>
-                <p> instagram + facebook + twitter + linkdein </p>
+          {
+            serviceData.map((item,index)=>(
+              <div class="content"  key={index} >
+              <div class="content_section">
+                <h1>w</h1>
+                <div class="data">
+                  <img src={item.image} alt="" />
+                  <h3>
+                    {item.serviceName} <span>{item.serviceName_hightlight}</span>
+                  </h3>
+  
+                  <p className="para">
+                   {item.para}
+                  </p>
+                  <p> {item.offer} </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="content">
-            <div class="content_section">
-              <h1>w</h1>
-            </div>
-          </div>
-          <div class="content">
-            <div class="content_section">
-              <h1>w</h1>
-            </div>
-          </div>
+            ))
+          }
+         
+          
         </div>
       </div>
     </>

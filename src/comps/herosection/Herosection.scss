@@ -2,10 +2,12 @@
     display: grid;
     grid-template-columns: repeat(32, 1fr);
     grid-template-rows: repeat(18, 1fr);
-    background-color: #000000;
+    // background-color: rgba(128, 128, 128, 0.262);
     width: 100%;
     height: 100dvh;
-    // overflow: hidden;
+    // gap: 1px;
+    background-color: black;
+    overflow: hidden;
     
     position: relative;
     z-index: 2; /* Ensure the grid is on top */
