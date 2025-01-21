@@ -112,6 +112,21 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div class="our_projects parent">
+        <div class="our_projects_cont">
+          <h4>
+          Explore our new recently <br/>
+          completed projects.
+          </h4>
+          <div class="list">
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
