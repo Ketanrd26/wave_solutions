@@ -284,23 +284,24 @@
 .our_projects {
   width: 100%;
   background-color: var(--accent_light);
-  padding: 40px 0px;
+  padding: 40px 0px 100px 0px;
   position: relative;
 
   .our_projects_cont {
-    max-width: 1800px;
+    max-width: 1600px;
     margin: auto;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: var(--unit);
+    gap: calc(var(--unit) * 2);
 
     h4 {
       font-size: calc(var(--unit) * 3);
       // max-width: 30ch;
       text-align: center;
+      line-height: 110%;
     }
 
     .list {
@@ -312,15 +313,87 @@
       position: relative;
       z-index: 2;
 
-
-      .card{
+      .card {
         width: calc(100% / 4);
-        aspect-ratio: 0.95;
-        background-color: red;
+        aspect-ratio: 0.85;
+        // background-color: red;
+        background-image: url("../../assets/tp.jpg");
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+          content: "W";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.377);
+          font-size: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Luckiest Guy", serif;
+          color: white;
+          transition: var(--trans);
+        }
+
+        .content {
+          width: 60%;
+          // height: 50%;
+          aspect-ratio: 1;
+          background-color: var(--accent2);
+          position: absolute;
+          bottom: 2%;
+          left: -100%;
+          z-index: 2;
+          // border-radius: 50%;
+          // transform: rotate(10deg);
+          display: flex;
+          padding: 10px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: calc(var(--unit) / 2);
+          transition: var(--trans);
+
+          .arrow {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--accent);
+            border-radius: 50%;
+            margin-bottom: 20px;
+
+            svg {
+              font-size: calc(var(--unit) * 2);
+              color: var(--white);
+            }
+          }
+
+          h5 {
+            font-size: var(--unit);
+            color: black;
+          }
+          p {
+            color: black;
+          }
+        }
+
+        &:hover {
+          &::after {
+            top: 0;
+          }
+
+          .content {
+            left: 2%;
+          }
+        }
       }
     }
   }
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -328,5 +401,41 @@
     width: 100%;
     height: 300px;
     background-color: black;
+  }
+}
+
+.our_clients {
+  padding: 80px 0px;
+  background-color: var(--white);
+
+  .our_cleints_cont {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--unit);
+    flex-direction: column;
+
+    h2{
+      font-size: calc(var(--unit) * 2);
+
+      span{
+        color: var(--accent2);
+      }
+    }
+
+    .list {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--unit);
+      .logo {
+        width: 200px;
+        height: 80px;
+        background-color: red;
+      }
+    }
   }
 }

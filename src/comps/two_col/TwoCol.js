@@ -99,6 +99,11 @@ const TwoCol = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vero
             atque voluptatem numquam voluptatibus fuga!
           </p>
+          <div class="btn">
+            <div class="text">
+              Contact Us
+            </div>
+          </div>
         </div>
         <div class="right-section">
 

@@ -3,7 +3,7 @@
   --black: #000000;
   --accent: #223f95;
   --accent2: #00a6e7;
-  --accent_light:#00a6e72a;
+  --accent_light: #00a6e72a;
   --teal: #227b94;
   --light-blue: #78b7d0;
   --yellow: #ffdc7f;
@@ -17,7 +17,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Luckiest+Guy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Luckiest+Guy&display=swap");
 @font-face {
   font-family: "Luckiest Guy Regular";
   src: local("Intelo Medium"), local("Intelo-Medium"),
@@ -41,7 +41,6 @@ body {
   // scroll-behavior: smooth;
   // background-color: var(--light-grey);
 }
-
 
 .parent {
   width: 100vw;
@@ -70,4 +69,42 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  padding: calc(var(--unit) / 2) var(--unit);
+  border: 2px solid var(--accent2);
+  cursor: pointer;
+  color: var(--accent2);
+  font-size: 24px;
+  position: relative;
+  overflow: hidden;
 
+  .text {
+    position: relative;
+    z-index: 2;
+    transition: var(--trans);
+
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -30%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent2);
+    transform: scale(0) rotate(45deg);
+    transform-origin: left bottom;
+    transition: var(--trans);
+  }
+
+  &:hover{
+    &::after{
+      transform: scale(4) rotate(45deg);
+    }
+
+    .text{
+      color: white;
+    }
+  }
+}

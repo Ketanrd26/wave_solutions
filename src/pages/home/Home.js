@@ -5,6 +5,11 @@ import "./Home.scss";
 import gsap from "gsap";
 import target from "../../assets/icons/targeted.png";
 import target_colored from "../../assets/icons/targeted_colored.png";
+import { FaArrowRight } from "react-icons/fa6";
+
+import tp from "../../assets/tp.jpg";
+import { Link } from "react-router-dom";
+import Whychoose from "../../comps/choose/Whychoose";
 
 const Home = () => {
   const videoRef = useRef();
@@ -28,6 +33,33 @@ const Home = () => {
       }
     );
   }, []);
+
+  const projectData = [
+    {
+      projectImage: tp,
+      category: "Development",
+      title: "Tattoo Website",
+      project_link: "",
+    },
+    {
+      projectImage: tp,
+      category: "Development",
+      title: "Manufacured Website",
+      project_link: "",
+    },
+    {
+      projectImage: tp,
+      category: "Development",
+      title: "Ploting Developer CRM Software",
+      project_link: "",
+    },
+    {
+      projectImage: tp,
+      category: "Development",
+      title: "Travellers Website",
+      project_link: "",
+    },
+  ];
   return (
     <>
       <Herosection />
@@ -53,7 +85,7 @@ const Home = () => {
             <div class="image bg-img-cover"></div>
             <div class="image_sen">
               <div class="inner">
-                we are <br/>
+                we are <br />
                 developers
               </div>
             </div>
@@ -116,17 +148,47 @@ const Home = () => {
       <div class="our_projects parent">
         <div class="our_projects_cont">
           <h4>
-          Explore our new recently <br/>
-          completed projects.
+            Explore our new recently <br />
+            completed projects.
           </h4>
           <div class="list">
-<div class="card"></div>
-<div class="card"></div>
-<div class="card"></div>
-<div class="card"></div>
+            {projectData.map((item, index) => (
+              <Link
+                to={item.project_link}
+                class="card  bg-img-cover "
+                style={{ backgroundImage: `url(${item.projectImage})` }}
+              >
+                <div class="content">
+                  <div class="arrow">
+                    <FaArrowRight />
+                  </div>
+                  <p>{item.category}</p>
+                  <h5>{item.title}</h5>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
+
+      <div class="our_clients parent">
+        <div class="our_cleints_cont cont">
+        <h2>
+          Our <span>
+          Clients
+          </span>
+        </h2>
+        <div class="list">
+        <div class="logo"></div>
+          <div class="logo"></div>
+          <div class="logo"></div>
+          <div class="logo"></div>
+          <div class="logo"></div>
+        </div>
+        </div>
+      </div>
+
+      <Whychoose/>
     </>
   );
 };

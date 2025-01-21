@@ -12,7 +12,8 @@
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "sass": "^1.83.1",
-    "smooth-scrollbar": "^8.8.4"
+    "smooth-scrollbar": "^8.8.4",
+    "swiper": "^11.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

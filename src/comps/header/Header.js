@@ -161,26 +161,24 @@ const Header = () => {
             <div class="contat_icons">
               <a class="mail">
                 <div class="icon">
-                <GrMail />
+                  <GrMail />
                 </div>
-                <p>
-                info@2024@fmail.com
-                </p>
+                <p>info@2024@fmail.com</p>
               </a>
               <a class="mail">
                 <div class="icon">
-                <MdPhoneIphone />
+                  <MdPhoneIphone />
                 </div>
-                <p>
-                info@2024@fmail.com
-                </p>
+                <p>info@2024@fmail.com</p>
               </a>
             </div>
           </div>
           <div className="right_nav_section" ref={navRef}>
             <div className="top">
-              <div className="btn">Contact Us</div>
-              <div className="hamburger"  onClick={() => setHeaderOpen(false)} >
+              <div className="btn">
+                <div class="text">Contact Us</div>
+              </div>
+              <div className="hamburger" onClick={() => setHeaderOpen(false)}>
                 <RxCross2 />
               </div>
             </div>
