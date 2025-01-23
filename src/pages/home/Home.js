@@ -173,22 +173,37 @@ const Home = () => {
 
       <div class="our_clients parent">
         <div class="our_cleints_cont cont">
-        <h2>
-          Our <span>
-          Clients
-          </span>
-        </h2>
-        <div class="list">
-        <div class="logo"></div>
-          <div class="logo"></div>
-          <div class="logo"></div>
-          <div class="logo"></div>
-          <div class="logo"></div>
-        </div>
+          <h2>
+            Our <span>Clients</span>
+          </h2>
+          <div class="list">
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+            <div class="logo"></div>
+          </div>
         </div>
       </div>
 
-      <Whychoose/>
+      <Whychoose />
+
+      <div class="blogs_parent parent">
+        <div class="blog_cont cont">
+          <h2>
+            Checkout latest news <br />
+            updates & <span>articles</span>
+          </h2>
+
+          <div class="blog_list">
+            <div class="blog_card">
+              <div class="image_section">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

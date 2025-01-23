@@ -25,6 +25,8 @@
       h2 {
         font-size: calc(var(--unit) * 2.5);
         line-height: 110%;
+        font-family: "Bebas Neue", serif;
+        letter-spacing: 2px;
       }
 
       h4 {
@@ -113,7 +115,7 @@
       align-items: center;
       gap: var(--unit);
 
-      .card{
+      .card {
         width: calc(100% / 3);
         height: 100%;
         background-color: red;
