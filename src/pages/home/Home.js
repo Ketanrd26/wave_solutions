@@ -68,16 +68,16 @@ const Home = () => {
           <div class="video" ref={videoRef}></div>
         </div>
       </div>
-      <TwoCol />
+      {/* <TwoCol /> */}
 
-      <div class="crousel_parent">
+      {/* <div class="crousel_parent">
         <p>*Inspired with creativity</p>
         <p>*unlock the potential</p>
         <p>*Transofrm ideas into reality</p>
         <p>*Design & development craft</p>
         <p>*unlock the potential</p>
         <p>*Transofrm ideas into reality</p>
-      </div>
+      </div> */}
 
       <div class="about_us_parent parent">
         <div class="about_us_cont cont">
@@ -198,8 +198,26 @@ const Home = () => {
           <div class="blog_list">
             <div class="blog_card">
               <div class="image_section">
-                
+                <div class="image bg-img-cover"></div>
               </div>
+              <div class="content_section">
+                <h2>Five ways that can develop your business website</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusantium, necessitatibus. Labore molestiae facilis suscipit
+                  Accusantium, necessitatibus. Labore molestiae facilis suscipit
+               
+                </p>
+              
+              </div>
+              <div class="bottom">
+                <p>
+                Read more
+                </p>
+                <div class="arrow_btn">
+                  
+                </div>
+                </div>
             </div>
           </div>
         </div>
