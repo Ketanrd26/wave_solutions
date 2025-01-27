@@ -296,6 +296,7 @@
   background-color: var(--accent_light);
   padding: 40px 0px 100px 0px;
   position: relative;
+  height: auto;
 
   .our_projects_cont {
     max-width: 1600px;
@@ -325,9 +326,10 @@
       gap: var(--unit);
       position: relative;
       z-index: 2;
+      flex-wrap: wrap;
 
       .card {
-        width: calc(100% / 4);
+        width: 350px;
         aspect-ratio: 0.85;
         // background-color: red;
         background-image: url("../../assets/tp.jpg");
@@ -633,6 +635,53 @@
           }
         }
       }
+    }
+  }
+}
+
+
+@media only screen and (max-width:900px){
+
+  .about_us_parent{
+    .about_us_cont{
+      flex-direction: column;
+
+
+      .left{
+        width: 100%;
+        aspect-ratio: 1;
+      }
+
+      .right{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:550px){
+  .about_us_parent{
+    .about_us_cont{
+      flex-direction: column;
+
+
+      .left{
+       .image_sen{
+        width: 200px;
+        height: 100px;
+
+
+        .inner{
+          font-size: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 10px;
+        }
+       }
+      }
+
+   
     }
   }
 }
