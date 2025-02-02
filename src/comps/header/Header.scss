@@ -150,7 +150,7 @@
         }
       }
 
-      .contat_icons{
+      .contat_icons {
         width: 100%;
         height: auto;
         display: flex;
@@ -159,29 +159,32 @@
         gap: var(--unit);
         padding: 20px 0px;
 
-
-        .mail{
+        .mail {
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 10px;
           cursor: pointer;
 
-          .icon{
+          .icon {
             display: flex;
             justify-content: center;
             align-items: center;
 
-            svg{
+            svg {
               font-size: 25px;
               color: var(--accent2);
             }
           }
 
-          p{
+          p {
             color: var(--white);
           }
         }
+      }
+
+      .left_head_btn {
+        display: none;
       }
     }
 
@@ -216,7 +219,7 @@
             color: var(--white);
           }
 
-          &:hover{
+          &:hover {
             transform: scale(1.2) rotate(10deg);
           }
         }
@@ -239,7 +242,7 @@
           justify-content: center;
           align-items: center;
           padding: 20px;
-          
+
           border-radius: 50%;
           position: relative; /* Essential for GSAP positioning */
           will-change: transform; /* Improves animation performance */
@@ -249,11 +252,133 @@
             color: var(--white);
           }
 
-          &:hover{
+          &:hover {
             background-color: var(--accent2);
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .nav_option {
+    .overlay {
+      .left_nav_section {
+        width: auto;
+      }
+
+      .right_nav_section {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .nav_option {
+    .overlay {
+      .left_nav_section {
+        .list {
+          .sections {
+            gap: 10px;
+            .link {
+              font-size: 50px;
+              padding: 0px 10px;
+            }
+          }
+        }
+      }
+
+      .right_nav_section {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .nav_option {
+    .overlay {
+      padding: 10px;
+      .left_nav_section {
+        .list {
+          .sections {
+            .desc {
+              font-size: calc(var(--unit));
+            }
+          }
+        }
+      }
+
+      .right_nav_section {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .nav_option {
+    .overlay {
+      .left_nav_section {
+        .left_head_btn {
+          display: flex;
+        }
+      }
+      .right_nav_section {
+        .top {
+          .header_btn {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav_option {
+    width: 100%;
+    .overlay {
+      width: 100%;
+      position: relative;
+      .left_nav_section {
+        width: 100%;
+        .list {
+          .sections {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+        }
+      }
+      .right_nav_section {
+        height: auto;
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        .social_links {
+          // display: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 460px){
+  .nav_option {
+    width: 100%;
+    .overlay {
+    
+      .left_nav_section {
+        width: 100%;
+        
+        .contat_icons{
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+   
     }
   }
 }

@@ -10,6 +10,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import tp from "../../assets/tp.jpg";
 import { Link } from "react-router-dom";
 import Whychoose from "../../comps/choose/Whychoose";
+import HerosectionTwo from "../../comps/herosection2/HerosectionTwo";
 
 const Home = () => {
   const videoRef = useRef();
@@ -62,13 +63,14 @@ const Home = () => {
   ];
   return (
     <>
+    <HerosectionTwo/>
       <Herosection />
       <div class="video_section parent">
         <div class="video_sec_cont cont">
           <div class="video" ref={videoRef}></div>
         </div>
       </div>
-      {/* <TwoCol /> */}
+      <TwoCol />
 
       {/* <div class="crousel_parent">
         <p>*Inspired with creativity</p>
@@ -79,7 +81,7 @@ const Home = () => {
         <p>*Transofrm ideas into reality</p>
       </div> */}
 
-      <div class="about_us_parent parent">
+      <div class="about_us_parent bg-img-cover parent">
         <div class="about_us_cont cont">
           <div class="left">
             <div class="image bg-img-cover"></div>

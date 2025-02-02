@@ -31,7 +31,7 @@
 *::before,
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  // border: 1px solid red;
   margin: 0px;
   font-family: "Poppins" sans-serif;
 }
@@ -78,6 +78,24 @@ a {
   position: relative;
   overflow: hidden;
 
+  &.btn2 {
+    border: 2px solid var(--white);
+
+    .text {
+      color: var(--white);
+    }
+
+    &::after{
+      background-color: var(--white);
+    }
+
+    &:hover{
+      .text{
+        color: var(--accent2);
+      }
+    }
+  }
+
   .text {
     position: relative;
     z-index: 2;
@@ -105,8 +123,6 @@ a {
 
     .text {
       color: white;
-     
-
     }
   }
 }

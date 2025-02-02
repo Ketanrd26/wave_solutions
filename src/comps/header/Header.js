@@ -172,10 +172,16 @@ const Header = () => {
                 <p>info@2024@fmail.com</p>
               </a>
             </div>
+
+            <div class="btn left_head_btn">
+              <div class="text">
+                Contact Us
+              </div>
+            </div>
           </div>
           <div className="right_nav_section" ref={navRef}>
             <div className="top">
-              <div className="btn">
+              <div className="btn header_btn">
                 <div class="text">Contact Us</div>
               </div>
               <div className="hamburger" onClick={() => setHeaderOpen(false)}>
