@@ -90,6 +90,7 @@ const TwoCol = () => {
   return (
     <>
       <div class="container">
+        <div class="overlay bg-img-cover"></div>
         <div class="left-section">
           <div class="heading">
             <h2 ref={headingRef}>Exclusive</h2>

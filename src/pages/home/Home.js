@@ -6,11 +6,16 @@ import gsap from "gsap";
 import target from "../../assets/icons/targeted.png";
 import target_colored from "../../assets/icons/targeted_colored.png";
 import { FaArrowRight } from "react-icons/fa6";
-
+import video from "../../assets/ad.webm";
 import tp from "../../assets/tp.jpg";
 import { Link } from "react-router-dom";
 import Whychoose from "../../comps/choose/Whychoose";
 import HerosectionTwo from "../../comps/herosection2/HerosectionTwo";
+import ReactPlayer from "react-player";
+import logo1 from "../../assets/moulees.webp";
+import logo2 from "../../assets/gandhi_travels.png";
+import logo3 from "../../assets/rohini_platsic.webp";
+import logo4 from "../../assets/parmeshwar.webp";
 
 const Home = () => {
   const videoRef = useRef();
@@ -63,11 +68,24 @@ const Home = () => {
   ];
   return (
     <>
-    <HerosectionTwo/>
+      <HerosectionTwo />
       <Herosection />
       <div class="video_section parent">
         <div class="video_sec_cont cont">
-          <div class="video" ref={videoRef}></div>
+          <div class="video" ref={videoRef}>
+            <div class="react_wrpaerer">
+              <ReactPlayer
+                className="react-player"
+                url={video}
+                width="100%"
+                height="100%"
+                playing={true}
+                playsinline
+                loop
+                muted
+              />
+            </div>
+          </div>
         </div>
       </div>
       <TwoCol />
@@ -179,11 +197,13 @@ const Home = () => {
             Our <span>Clients</span>
           </h2>
           <div class="list">
-            <div class="logo"></div>
-            <div class="logo"></div>
-            <div class="logo"></div>
-            <div class="logo"></div>
-            <div class="logo"></div>
+            <img src={logo1} className="logo" alt="" />
+            <img src={logo2} className="logo" alt="" />
+            <img src={logo3} className="logo" alt="" />
+            <img src={logo4} className="logo" alt="" />
+           
+            {/* <div class="logo"></div>
+            <div class="logo"></div> */}
           </div>
         </div>
       </div>
@@ -208,18 +228,12 @@ const Home = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium, necessitatibus. Labore molestiae facilis suscipit
                   Accusantium, necessitatibus. Labore molestiae facilis suscipit
-               
                 </p>
-              
               </div>
               <div class="bottom">
-                <p>
-                Read more
-                </p>
-                <div class="arrow_btn">
-                  
-                </div>
-                </div>
+                <p>Read more</p>
+                <div class="arrow_btn"></div>
+              </div>
             </div>
           </div>
         </div>

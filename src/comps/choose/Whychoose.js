@@ -1,21 +1,25 @@
 import React, { useEffect, useRef } from "react";
 import "./Whychoose.scss";
 
+// icon
+import success from "../../assets/sucess.png";
+import leader from "../../assets/key.png";
+import solution from "../../assets/promotion.png";
 const Whychoose = () => {
-    const textRef = useRef(null); // Ref for the text container
+  const textRef = useRef(null); // Ref for the text container
 
-    useEffect(() => {
-      if (textRef.current) {
-        const text = "Grow Together"; // Define the text content
-        textRef.current.innerHTML = text
-          .split("")
-          .map(
-            (char, i) =>
-              `<span style="transform: rotate(${i * 20}deg);">${char}</span>`
-          ) 
-          .join(""); 
-      }
-    }, []);
+  useEffect(() => {
+    if (textRef.current) {
+      const text = "Grow Together"; // Define the text content
+      textRef.current.innerHTML = text
+        .split("")
+        .map(
+          (char, i) =>
+            `<span style="transform: rotate(${i * 20}deg);">${char}</span>`
+        )
+        .join("");
+    }
+  }, []);
 
   return (
     <>
@@ -31,22 +35,33 @@ const Whychoose = () => {
             </p>
           </div>
           <div className="right">
-            <div className="image"></div>
+            <div className="image bg-img-cover"></div>
             <div className="tag">
-                <p class="text">w</p>
-              <p className="p" ref={textRef}>Grow Together</p>
+              <p class="text">w</p>
+              <p className="p" ref={textRef}>
+                Grow Together
+              </p>
             </div>
           </div>
 
           <div class="why_choose_content">
             <div class="card">
-                
+              <div class="left">
+                <img src={leader} alt="" />
+              </div>
+              <p>Leader in digital marketing</p>
             </div>
             <div class="card">
-
+              <div class="left">
+                <img src={success} alt="" />
+              </div>
+              <p>Highest success rates</p>
             </div>
             <div class="card">
-
+              <div class="left">
+                <img src={solution} alt="" />
+              </div>
+              <p>Quality marketing solutions</p>
             </div>
           </div>
         </div>

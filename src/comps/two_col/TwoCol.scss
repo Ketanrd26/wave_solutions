@@ -1,5 +1,17 @@
 .container {
   display: flex;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../../assets/patterm.png");
+    z-index: 0;
+    opacity: 0.05;
+  }
 }
 
 .left-section {
@@ -189,7 +201,7 @@
 
           h1 {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
           }
         }
@@ -206,9 +218,20 @@
 
     .right-section {
       .content {
+        aspect-ratio: 0.8;
         .content_section {
           h1 {
             font-size: 300px;
+          }
+
+          .data {
+            h3 {
+              text-align: center;
+            }
+
+            p {
+              text-align: center;
+            }
           }
         }
       }
@@ -225,6 +248,18 @@
       .heading {
         width: 100%;
         font-size: 40px;
+      }
+    }
+
+    .right-section {
+      .content {
+        .content_section {
+          .data {
+            img {
+              width: 60%;
+            }
+          }
+        }
       }
     }
   }

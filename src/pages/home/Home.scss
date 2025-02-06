@@ -13,8 +13,28 @@
       width: 100%;
       // aspect-ratio: 19/6;
       height: 80%;
-      background-color: red;
+      overflow: hidden;
+     
       border-radius: var(--unit);
+
+      .react_wrpaerer{
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .react-player{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          video{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
   }
 }
@@ -98,7 +118,7 @@
         width: 70%;
         height: 80%;
         // background-color: black;
-        background-image: url("../../assets/image1.jpg");
+        background-image: url("../../assets/image1.webp");
         position: absolute;
         top: 0;
         left: 10%;
@@ -139,7 +159,7 @@
       .image_thi {
         width: 50%;
         height: 200px;
-        background-image: url("../../assets/imag2.jpg");
+        background-image: url("../../assets/imag2.webp");
         border: 10px solid white;
         position: absolute;
         bottom: 0;
@@ -417,7 +437,10 @@
     left: 0;
     width: 100%;
     height: 300px;
-    background-color: black;
+    background-image: url("../../assets/tp_img.webp");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed
   }
 }
 
@@ -449,10 +472,11 @@
       justify-content: center;
       align-items: center;
       gap: var(--unit);
+      flex-wrap: wrap;
       .logo {
         width: 200px;
-        height: 80px;
-        background-color: red;
+        height: auto;
+        // background-color: red;
       }
     }
   }
@@ -510,7 +534,7 @@
           .image {
             width: 100%;
             height: 100%;
-            background-image: url("../../assets/image1.jpg");
+            background-image: url("../../assets/image1.webp");
             transition: var(--trans);
           }
 

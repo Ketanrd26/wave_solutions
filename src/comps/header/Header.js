@@ -6,8 +6,28 @@ import { RiLinkedinFill } from "react-icons/ri";
 import gsap from "gsap";
 import { GrMail } from "react-icons/gr";
 import { MdPhoneIphone } from "react-icons/md";
+import logo from "../../assets/wave solution logo.webp"
+import logo2 from "../../assets/wave solution logo_black.webp"
 const Header = () => {
   const [headerOpen, setHeaderOpen] = useState(false);
+  const [headerActive,setHeaderActive] = useState(false);
+
+  useEffect(()=>{
+    const headerHeightActive = ()=>{
+      if(window.scrollY>1080){
+        setHeaderActive(true);
+      }else{
+        setHeaderActive(false);
+
+      }
+    }
+
+    window.addEventListener("scroll", headerHeightActive);
+
+    return ()=>{
+      window.removeEventListener("scroll", headerHeightActive);
+    }
+  })
 
   const navLinks = [
     {
@@ -126,8 +146,11 @@ const Header = () => {
   const location = useLocation();
   return (
     <>
-      <div class="header_parent parent">
-        <div class="left"></div>
+      <div class={headerActive ? "header_parent parent active" : "header_parent parent"}>
+        <div class="left">
+          <img src={logo} alt="" className="logo1" />
+          <img src={logo2} alt="" className="logo2" />
+        </div>
         <div class="right">
           <div class="hamburger" onClick={() => setHeaderOpen(true)}>
             <span></span>
@@ -162,6 +185,12 @@ const Header = () => {
               <a class="mail">
                 <div class="icon">
                   <GrMail />
+                </div>
+                <p>info@2024@fmail.com</p>
+              </a>
+              <a class="mail">
+                <div class="icon">
+                  <MdPhoneIphone />
                 </div>
                 <p>info@2024@fmail.com</p>
               </a>
