@@ -477,6 +477,11 @@
         width: 200px;
         height: auto;
         // background-color: red;
+
+
+        &:nth-child(5){
+          width: 100px;
+        }
       }
     }
   }

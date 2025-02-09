@@ -27,11 +27,14 @@ const Whychoose = () => {
         <div className="why_choose_cont cont">
           <div className="left">
             <h2>Why should choose our agency?</h2>
-            <h4>Proin est lacus, sagittis lobortis iaculise get.</h4>
+            <h4>Drive Growth with Proven Strategies & Expert Solutions</h4>
             <p>
-              There are many variations of passages of available but the
-              majority have suffered. Alteration in some form, lipsum is simply
-              free text by injected humou or randomised words even believable.
+              We are a results-driven digital marketing agency dedicated to
+              helping businesses grow. With expert strategies, high success
+              rates, and top-quality marketing solutions, we ensure your brand
+              stands out in the digital world. From increasing visibility to
+              driving conversions, we provide everything you need to succeed
+              online. Let’s build something great together!
             </p>
           </div>
           <div className="right">

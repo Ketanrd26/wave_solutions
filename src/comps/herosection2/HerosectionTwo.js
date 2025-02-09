@@ -5,7 +5,7 @@ import hero_video from "../../assets/hero_video.mp4";
 const HerosectionTwo = () => {
   return (
     <>
-      <div class="herosection_two parent">
+      <div class="herosection_two parent" id="home">
         <div class="herosection_two_cont cont">
           <div class="top">
             <div class="react-wrapper">
@@ -23,10 +23,10 @@ const HerosectionTwo = () => {
           </div>
           <div class="bottom">
             <h2>
-              Building <span>Website</span> <br /> Development
+            Creative<span> Minds</span> <br /> UNSTOPPABLE
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In, odio?
+            Transform Your Online Presence with Expert Web Development
             </p>
             <div class="btn btn2">
               <div class="text">Contact Us</div>

@@ -69,27 +69,27 @@ const TwoCol = () => {
       image:digital_marketing,
       serviceName:"Digital",
       serviceName_hightlight:"Marketing",
-      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque magni ad accusamus dolor? Et!",
+      para:" Boost your brand with data-driven strategies, SEO, social media marketing, and paid ads to maximize reach and conversions.",
       offer:"instagram + facebook + twitter + linkdein"
     },
     {
       image:website,
       serviceName:"Website",
       serviceName_hightlight:"Development",
-      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque magni ad accusamus dolor? Et!",
+      para:"Get a stunning, user-friendly, and responsive website that enhances your brand identity and delivers a seamless experience.",
       offer:"seo + all device optimization + Custom design"
     },
     {
       image:ecomm,
       serviceName:"E-Commerce",
       serviceName_hightlight:"Development",
-      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque magni ad accusamus dolor? Et!",
+      para:" Build a powerful online store with secure payments, smooth navigation, and optimized performance to drive sales effortlessly.",
       offer:"user authentication + security + admin panel "
     }
   ]
   return (
     <>
-      <div class="container">
+      <div class="container"  id="service" >
         <div class="overlay bg-img-cover"></div>
         <div class="left-section">
           <div class="heading">
@@ -97,8 +97,7 @@ const TwoCol = () => {
             <h2 ref={secondheadingref}>Services</h2>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vero
-            atque voluptatem numquam voluptatibus fuga!
+          We specialize in digital marketing, website design, and e-commerce development to help your brand grow, engage, and succeed online.
           </p>
           <div class="btn">
             <div class="text">

@@ -32,21 +32,21 @@ const Header = () => {
   const navLinks = [
     {
       link_name: "HOME",
-      link_path: "/",
+      link_path: "#home",
     },
     {
       link_name: "ABOUT",
-      link_path: "/about",
+      link_path: "#about",
       desc: "Know more about Wave solutions",
     },
     {
       link_name: "PROJECTS",
-      link_path: "/our-projects",
+      link_path: "#projects",
       desc: "Completed 10+ projects in 3 to 4 months",
     },
     {
       link_name: "SERVICES",
-      link_path: "/services",
+      link_path: "#service",
       desc: "give proper service is our passion",
     },
     {
@@ -166,17 +166,18 @@ const Header = () => {
             <div class="list">
               {navLinks.map((item, index) => (
                 <div class="sections">
-                  <Link
+                  <a
+                  onClick={()=>setHeaderOpen(false)}
                     className={
                       location.pathname === item.link_path
                         ? "active link"
                         : "link"
                     }
                     key={index}
-                    to={item.link_path}
+                    href={item.link_path}
                   >
                     {item.link_name}
-                  </Link>
+                  </a>
                   <p className="desc">{item.desc}</p>
                 </div>
               ))}

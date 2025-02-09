@@ -22,7 +22,7 @@ const Herosection = () => {
   const neighbors = calculateNeighborClasses(hoveredBox);
 
   return (
-    <div className="grid-container">
+    <div className="grid-container"  id="home">
       {Array.from({ length: gridSize * gridSize }).map((_, index) => (
         <div
           key={index}
@@ -43,21 +43,21 @@ const Herosection = () => {
 
       <div className="text">
         <h2 className="first_text">
-          lorem
+        Creative
           <span className="img">
             <img src={pc_img} alt="" />
           </span>
-          lipsum
+          Minds
         </h2>
         <h2>
-          <span className="stroke">Building</span>
-          Website
+          <span className="stroke">Digital</span>
+          Success
         </h2>
         <h2>
-          <span style={{ color: "var(--accent2)" }}>Development</span>
+          <span style={{ color: "var(--accent2)" }}>UNSTOPPABLE</span>
         </h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. In, odio?
+        Transform Your Online Presence with Expert Web Development
         </p>
       </div>
 

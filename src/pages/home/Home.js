@@ -5,6 +5,8 @@ import "./Home.scss";
 import gsap from "gsap";
 import target from "../../assets/icons/targeted.png";
 import target_colored from "../../assets/icons/targeted_colored.png";
+import website from "../../assets/icons/web-design.png";
+import website_colred from "../../assets/icons/web-design_colred.png";
 import { FaArrowRight } from "react-icons/fa6";
 import video from "../../assets/ad.webm";
 import tp from "../../assets/tp.jpg";
@@ -16,6 +18,7 @@ import logo1 from "../../assets/moulees.webp";
 import logo2 from "../../assets/gandhi_travels.png";
 import logo3 from "../../assets/rohini_platsic.webp";
 import logo4 from "../../assets/parmeshwar.webp";
+import logo5 from "../../assets/shree_logo.png";
 
 const Home = () => {
   const videoRef = useRef();
@@ -99,7 +102,7 @@ const Home = () => {
         <p>*Transofrm ideas into reality</p>
       </div> */}
 
-      <div class="about_us_parent bg-img-cover parent">
+      <div class="about_us_parent bg-img-cover parent" id="about" >
         <div class="about_us_cont cont">
           <div class="left">
             <div class="image bg-img-cover"></div>
@@ -114,11 +117,12 @@ const Home = () => {
           </div>
           <div class="right">
             <p className="tag">get to know us</p>
-            <h3 className="heading">The best digital marketing solutions</h3>
+            <h3 className="heading">The Best Digital Marketing Solutions</h3>
             <p className="content">
-              There are many variations of passages of available but the
-              majority have suffered alteration in some form, by injected hum
-              randomised words which don't slightly.
+              We help businesses grow with cutting-edge digital marketing
+              strategies, innovative web design, and powerful e-commerce
+              solutions. Our expert team is dedicated to crafting results-driven
+              campaigns that boost engagement, visibility, and sales.
             </p>
 
             <div class="list">
@@ -134,29 +138,29 @@ const Home = () => {
                   </div>
                 </div>
                 <div class="right_content">
-                  <h3>Leading in marketing</h3>
+                  <h3>Leading in Marketing</h3>
                   <p>
-                    Knowledge of technologies rules better than anyone which we
-                    apply in our daily work
+                    We apply advanced marketing strategies to enhance brand
+                    presence and drive conversions effectively.
                   </p>
                 </div>
               </div>
               <div class="lits_item">
                 <div class="left_icon">
                   <div class="icon">
-                    <img src={target} alt="" className="icon_image" />
+                    <img src={website} alt="" className="icon_image" />
                     <img
-                      src={target_colored}
+                      src={website_colred}
                       alt=""
                       className="icon_color_image"
                     />
                   </div>
                 </div>
                 <div class="right_content">
-                  <h3>Leading in marketing</h3>
+                  <h3>Creative Web Design</h3>
                   <p>
-                    Knowledge of technologies rules better than anyone which we
-                    apply in our daily work
+                    We create stunning, user-friendly websites that leave a
+                    lasting impression and improve user experience.
                   </p>
                 </div>
               </div>
@@ -165,7 +169,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="our_projects parent">
+      <div class="our_projects parent" id="projects" >
         <div class="our_projects_cont">
           <h4>
             Explore our new recently <br />
@@ -201,7 +205,8 @@ const Home = () => {
             <img src={logo2} className="logo" alt="" />
             <img src={logo3} className="logo" alt="" />
             <img src={logo4} className="logo" alt="" />
-           
+            <img src={logo5} className="logo" alt="" />
+
             {/* <div class="logo"></div>
             <div class="logo"></div> */}
           </div>
