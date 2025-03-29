@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Header from "./comps/header/Header";
 import Footer from "./comps/footer/Footer";
 import Contact from "./pages/contact/Contact";
+import Privacy from "./pages/privacy/Privacy";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
          
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
         <Footer/>
       </BrowserRouter>

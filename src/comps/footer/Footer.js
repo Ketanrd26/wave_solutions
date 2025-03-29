@@ -28,7 +28,7 @@ const Footer = () => {
               <a href="mailto:wavesolutions024@gmail.com" target="_blank"><p>wavesolutions024@gmail.com</p></a>
             </a>
           </div>
-          <Link className="privacy" >Privacy Policy</Link>
+          <Link to="/privacy" className="privacy" >Privacy Policy</Link>
         </div>
       </div>
     </>
