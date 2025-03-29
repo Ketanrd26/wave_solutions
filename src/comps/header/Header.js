@@ -3,6 +3,9 @@ import "./Header.scss";
 import { Link, useLocation } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
 import { RiLinkedinFill } from "react-icons/ri";
+import { FiInstagram } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
 import gsap from "gsap";
 import { GrMail } from "react-icons/gr";
 import { MdPhoneIphone } from "react-icons/md";
@@ -10,13 +13,13 @@ import logo from "../../assets/wave solution logo.webp"
 import logo2 from "../../assets/wave solution logo_black.webp"
 const Header = () => {
   const [headerOpen, setHeaderOpen] = useState(false);
-  const [headerActive,setHeaderActive] = useState(false);
+  const [headerActive, setHeaderActive] = useState(false);
 
-  useEffect(()=>{
-    const headerHeightActive = ()=>{
-      if(window.scrollY>1080){
+  useEffect(() => {
+    const headerHeightActive = () => {
+      if (window.scrollY > 1080) {
         setHeaderActive(true);
-      }else{
+      } else {
         setHeaderActive(false);
 
       }
@@ -24,7 +27,7 @@ const Header = () => {
 
     window.addEventListener("scroll", headerHeightActive);
 
-    return ()=>{
+    return () => {
       window.removeEventListener("scroll", headerHeightActive);
     }
   })
@@ -126,20 +129,20 @@ const Header = () => {
 
   const social_links = [
     {
-      icons: <RiLinkedinFill />,
-      linke: "#",
+      icons: <FiInstagram />,
+      linke: "https://www.instagram.com/wavesolutions2024?igsh=OGtmamFpY2k5Mjdl",
     },
     {
-      icons: <RiLinkedinFill />,
-      linke: "#",
+      icons: <FaXTwitter />,
+      linke: "https://x.com/WaveSolutions02",
     },
     {
-      icons: <RiLinkedinFill />,
-      linke: "#",
+      icons: <FaWhatsapp />,
+      linke: "tel:+91 70289 97574",
     },
     {
-      icons: <RiLinkedinFill />,
-      linke: "#",
+      icons: <GrMail />,
+      linke: "mailto:wavesolutions024@gmail.com",
     },
   ];
 
@@ -167,7 +170,7 @@ const Header = () => {
               {navLinks.map((item, index) => (
                 <div class="sections">
                   <a
-                  onClick={()=>setHeaderOpen(false)}
+                    onClick={() => setHeaderOpen(false)}
                     className={
                       location.pathname === item.link_path
                         ? "active link"
@@ -187,19 +190,27 @@ const Header = () => {
                 <div class="icon">
                   <GrMail />
                 </div>
-                <p>info@2024@fmail.com</p>
+
+                <a href="mailto:wavesolutions024@gmail.com" target="_blank"><p>wavesolutions024@gmail.com</p></a>
+
               </a>
               <a class="mail">
                 <div class="icon">
                   <MdPhoneIphone />
                 </div>
-                <p>info@2024@fmail.com</p>
+                <a class="phone" href="tel:+91 70289 97574">
+
+                  <p>+91 70289 97574</p>
+                </a>
               </a>
               <a class="mail">
                 <div class="icon">
                   <MdPhoneIphone />
                 </div>
-                <p>info@2024@fmail.com</p>
+                <a class="phone" href="tel:+91 90969 15795">
+
+                  <p>+91 90969 15795</p>
+                </a>
               </a>
             </div>
 
@@ -221,8 +232,9 @@ const Header = () => {
             <div className="social_links">
               {social_links.map((item, i) => (
                 <a
-                  href="#"
+                  href={item.linke}
                   key={i}
+                  target="_blank"
                   ref={(el) => (linksRef.current[i] = el)}
                   className="social_link"
                   onMouseEnter={() => handleMouseEnter(i)} // Detect mouse enter on each link
