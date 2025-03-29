@@ -151,17 +151,7 @@
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .why_choose_parent {
-    .why_choose_cont {
-      .why_choose_content {
-        bottom: 10%;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1100px) {
   .why_choose_parent {
     .why_choose_cont {
       .why_choose_content {
@@ -171,7 +161,17 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+// @media only screen and (max-width: 950px) {
+//   .why_choose_parent {
+//     .why_choose_cont {
+//       .why_choose_content {
+//         bottom: 0 !important;
+//       }
+//     }
+//   }
+// }
+
+@media only screen and (max-width: 1000px) {
   .why_choose_parent {
     .why_choose_cont {
       flex-direction: column;

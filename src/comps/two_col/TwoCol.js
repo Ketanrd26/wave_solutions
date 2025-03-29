@@ -111,7 +111,7 @@ const TwoCol = () => {
             serviceData.map((item,index)=>(
               <div class="content"  key={index} >
               <div class="content_section">
-                <h1>w</h1>
+                
                 <div class="data">
                   <img src={item.image} alt="" />
                   <h3>

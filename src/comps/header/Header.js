@@ -32,7 +32,7 @@ const Header = () => {
   const navLinks = [
     {
       link_name: "HOME",
-      link_path: "#home",
+      link_path: "/",
     },
     {
       link_name: "ABOUT",
