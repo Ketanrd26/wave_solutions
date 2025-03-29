@@ -9,6 +9,7 @@ import "./TwoCol.scss";
 import digital_marketing from "../../assets/digital_marketing.png";
 import website from "../../assets/website.png";
 import ecomm from "../../assets/e-commerce.png";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,9 +101,9 @@ const TwoCol = () => {
           We specialize in digital marketing, website design, and e-commerce development to help your brand grow, engage, and succeed online.
           </p>
           <div class="btn">
-            <div class="text">
+            <Link to="/contact" class="text">
               Contact Us
-            </div>
+            </Link>
           </div>
         </div>
         <div class="right-section">

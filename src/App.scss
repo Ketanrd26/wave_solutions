@@ -3,7 +3,7 @@
   --black: #000000;
   --accent: #223f95;
   --accent2: #00a6e7;
-  --accent_light: #00a6e72a;
+  --accent_light: #9ee4ff2a;
   --teal: #227b94;
   --light-blue: #78b7d0;
   --yellow: #ffdc7f;
@@ -14,6 +14,8 @@
   --shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
   --trans: all 0.4s ease-in-out;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -69,6 +71,10 @@ a {
   text-decoration: none;
 }
 
+// h1,h2,h3,h4,h5,h6{
+//   font-family: "Noto Serif", serif;
+// }
+
 .btn {
   padding: calc(var(--unit) / 2) var(--unit);
   border: 2px solid var(--accent2);
@@ -91,7 +97,7 @@ a {
 
     &:hover{
       .text{
-        color: var(--accent2);
+        color: var(--white);
       }
     }
   }
@@ -100,6 +106,7 @@ a {
     position: relative;
     z-index: 2;
     transition: var(--trans);
+    color: var(--accent2);
     font-family: "Bebas Neue", serif;
   }
 
@@ -111,14 +118,15 @@ a {
     width: 100%;
     height: 100%;
     background-color: var(--accent2);
-    transform: scale(0) rotate(40deg);
+    transform: scale(0) rotate(60deg);
     transform-origin: left bottom;
     transition: var(--trans);
+    
   }
 
   &:hover {
     &::after {
-      transform: scale(4) rotate(40deg);
+      transform: scale(4) rotate(30deg);
     }
 
     .text {

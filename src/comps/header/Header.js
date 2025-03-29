@@ -146,11 +146,11 @@ const Header = () => {
   const location = useLocation();
   return (
     <>
-      <div class={headerActive ? "header_parent parent active" : "header_parent parent"}>
-        <div class="left">
+      <div class={headerActive || location.pathname === "/contact" ? "header_parent parent active" : "header_parent parent"}>
+        <Link to="/" class="left">
           <img src={logo} alt="" className="logo1" />
           <img src={logo2} alt="" className="logo2" />
-        </div>
+        </Link>
         <div class="right">
           <div class="hamburger" onClick={() => setHeaderOpen(true)}>
             <span></span>
