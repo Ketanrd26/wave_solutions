@@ -2,7 +2,7 @@ import React from "react";
 import "./Contact.scss";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaWhatsapp } from "react-icons/fa";    
+import { FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 const Contact = () => {
   return (
@@ -12,8 +12,7 @@ const Contact = () => {
           <div class="top_section">
             <h1>Contact Us</h1>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-              nam, sequi itaque quidem beatae provident!
+              Have questions or need assistance? We're here to help! Get in touch with us, and our team will get back to you as soon as possible.
             </p>
           </div>
           <div class="social_media_icons">
@@ -21,15 +20,15 @@ const Contact = () => {
               <FaInstagram />
             </a>
             <a href="">
-            <FaXTwitter />
+              <FaXTwitter />
             </a>
             <a href="">
-            <FaWhatsapp />
+              <FaWhatsapp />
             </a>
             <a href="">
-            <IoMailOutline />
+              <IoMailOutline />
             </a>
-          </div>  
+          </div>
         </div>
       </div>
 
@@ -37,51 +36,47 @@ const Contact = () => {
         <div class="contact_form_cont cont">
           <div class="left">
             <div class="top">
-              <h1>lorem lipsum to next to words</h1>
+              <h1>Our Process to Success</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                rerum perspiciatis placeat unde similique necessitatibus!
+                We follow a structured approach to ensure efficiency and quality in everything we do. Here’s how we make things happen:
               </p>
             </div>
 
             <div class="steps">
               <div class="step1">
                 <div class="top">
-                  <h2>Lorem ipsum dolor sit.</h2>
+                  <h2>Understanding Your Needs</h2>
 
                   <div class="icon">
                     <span>1</span>
                   </div>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptas, aspernatur.
+                  We take the time to understand your goals, requirements, and challenges to create a tailored solution that aligns with your vision.
                 </p>
               </div>
               <div class="step1">
                 <div class="top">
-                  <h2>Lorem ipsum dolor sit.</h2>
+                  <h2>Strategy & Planning</h2>
 
                   <div class="icon">
-                    <span>1</span>
+                    <span>2</span>
                   </div>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptas, aspernatur.
+                  Our team formulates a well-defined strategy, outlining the necessary steps, timelines, and resources to ensure a smooth execution.
                 </p>
               </div>
               <div class="step1">
                 <div class="top">
-                  <h2>Lorem ipsum dolor sit.</h2>
+                  <h2>Implementation & Execution</h2>
 
                   <div class="icon">
-                    <span>1</span>
+                    <span>3</span>
                   </div>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptas, aspernatur.
+                  With a solid plan in place, we bring your project to life, ensuring precision, creativity, and high-quality outcomes.
                 </p>
               </div>
             </div>

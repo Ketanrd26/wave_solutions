@@ -15,17 +15,17 @@ const Footer = () => {
           </div>
           <p className="copyright" >Copyright © 2023 Wave Solutions. All rights reserved.</p>
           <div class="contact">
-            <a class="phone">
+            <a class="phone" href="tel:+91 70289 97574">
               <span>
-              <IoIosCall />
+                <IoIosCall />
               </span>
-              <p>+911234567890</p>
+              <p>+91 70289 97574</p>
             </a>
             <a class="phone">
               <span>
-              <IoMailSharp />
+                <IoMailSharp />
               </span>
-              <p>wavesolutions024@gmail.com</p>
+              <a href="mailto:wavesolutions024@gmail.com" target="_blank"><p>wavesolutions024@gmail.com</p></a>
             </a>
           </div>
           <Link className="privacy" >Privacy Policy</Link>

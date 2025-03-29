@@ -27,15 +27,12 @@ const Whychoose = () => {
         <div className="why_choose_cont cont">
           <div className="left">
             <h2>Why should choose our agency?</h2>
-            <h4>Drive Growth with Proven Strategies & Expert Solutions</h4>
+            <h4>Accelerate Your Business Growth with Smart Strategies & <br /> Expert Execution</h4>
+
             <p>
-              We are a results-driven digital marketing agency dedicated to
-              helping businesses grow. With expert strategies, high success
-              rates, and top-quality marketing solutions, we ensure your brand
-              stands out in the digital world. From increasing visibility to
-              driving conversions, we provide everything you need to succeed
-              online. Let’s build something great together!
-            </p>
+              At Wave Solutions, we don’t just offer services—we build success stories. Our innovative approach, combined with industry expertise, ensures that your brand gains maximum exposure and conversion in the digital space. Whether it's strategic marketing, high-performing websites, or seamless eCommerce solutions, we’ve got you covered.<br/>Let's create something impactful together!
+            </p> 
+           
           </div>
           <div className="right">
             <div className="image bg-img-cover"></div>
@@ -52,19 +49,19 @@ const Whychoose = () => {
               <div class="left">
                 <img src={leader} alt="" />
               </div>
-              <p>Leader in digital marketing</p>
+              <p>Innovators in Digital Marketing</p>
             </div>
             <div class="card">
               <div class="left">
                 <img src={success} alt="" />
               </div>
-              <p>Highest success rates</p>
+              <p>Proven Track Record of Success</p>
             </div>
             <div class="card">
               <div class="left">
                 <img src={solution} alt="" />
               </div>
-              <p>Quality marketing solutions</p>
+              <p>Comprehensive & Scalable Solutions</p>
             </div>
           </div>
         </div>

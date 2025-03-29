@@ -212,7 +212,7 @@ const Header = () => {
           <div className="right_nav_section" ref={navRef}>
             <div className="top">
               <div className="btn header_btn">
-                <div class="text">Contact Us</div>
+                <Link to="/contact" class="text">Contact Us</Link>
               </div>
               <div className="hamburger" onClick={() => setHeaderOpen(false)}>
                 <RxCross2 />
