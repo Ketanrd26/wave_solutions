@@ -5,11 +5,13 @@ import Header from "./comps/header/Header";
 import Footer from "./comps/footer/Footer";
 import Contact from "./pages/contact/Contact";
 import Privacy from "./pages/privacy/Privacy";
+import ScrollToTop from "./comps/scrolltotop/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop/>
        <Header />
         <Routes>
          

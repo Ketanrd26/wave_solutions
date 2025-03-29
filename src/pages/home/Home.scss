@@ -716,3 +716,38 @@
     }
   }
 }
+
+@media only screen and (max-width:550px) {
+  .about_us_parent{
+
+    .about_us_cont{
+
+    .right{
+      .list{
+        .lits_item{
+          flex-direction: column;
+
+          .right_content{
+            width: 100%;
+          }
+        }
+      }
+    }
+    }
+  }
+
+  .our_projects{
+   .our_projects_cont{
+
+
+    .list{
+      padding: 0px 20px;
+
+
+      .card{
+        width: 100%;
+      }
+    }
+   } 
+  }
+}

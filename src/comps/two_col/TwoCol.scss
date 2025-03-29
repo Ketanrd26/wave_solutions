@@ -218,6 +218,18 @@
     // margin: auto;
     flex-direction: column !important;
 
+    .left-section {
+      align-items: center;
+      .heading {
+        justify-content: center;
+        align-items: center ;
+      }
+
+      p{
+        text-align: center;
+      }
+    }
+
     .right-section {
       .content {
         aspect-ratio: 0.8;
@@ -246,6 +258,8 @@
     .left-section {
       width: 100%;
       padding: 50px 40px;
+      justify-content: center;
+      align-items: center;
 
       .heading {
         width: 100%;
@@ -255,6 +269,7 @@
 
     .right-section {
       .content {
+        margin-bottom: 20px;
         .content_section {
           .data {
             img {

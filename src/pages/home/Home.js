@@ -167,7 +167,7 @@ const Home = () => {
       </div>
 
       <div class="our_projects parent" id="projects">
-        <div class="our_projects_cont">
+        <div class="our_projects_cont cont">
           <h4>
             Explore our new recently <br />
             completed projects.

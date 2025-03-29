@@ -9,8 +9,8 @@ import { FaWhatsapp } from "react-icons/fa6";
 import gsap from "gsap";
 import { GrMail } from "react-icons/gr";
 import { MdPhoneIphone } from "react-icons/md";
-import logo from "../../assets/wave solution logo.webp"
-import logo2 from "../../assets/wave solution logo_black.webp"
+import logo from "../../assets/wave solution logo.webp";
+import logo2 from "../../assets/wave solution logo_black.webp";
 const Header = () => {
   const [headerOpen, setHeaderOpen] = useState(false);
   const [headerActive, setHeaderActive] = useState(false);
@@ -21,16 +21,15 @@ const Header = () => {
         setHeaderActive(true);
       } else {
         setHeaderActive(false);
-
       }
-    }
+    };
 
     window.addEventListener("scroll", headerHeightActive);
 
     return () => {
       window.removeEventListener("scroll", headerHeightActive);
-    }
-  })
+    };
+  });
 
   const navLinks = [
     {
@@ -130,7 +129,8 @@ const Header = () => {
   const social_links = [
     {
       icons: <FiInstagram />,
-      linke: "https://www.instagram.com/wavesolutions2024?igsh=OGtmamFpY2k5Mjdl",
+      linke:
+        "https://www.instagram.com/wavesolutions2024?igsh=OGtmamFpY2k5Mjdl",
     },
     {
       icons: <FaXTwitter />,
@@ -149,7 +149,13 @@ const Header = () => {
   const location = useLocation();
   return (
     <>
-      <div class={headerActive || location.pathname === "/contact" ? "header_parent parent active" : "header_parent parent"}>
+      <div
+        class={
+          headerActive || location.pathname === "/contact"
+            ? "header_parent parent active"
+            : "header_parent parent"
+        }
+      >
         <Link to="/" class="left">
           <img src={logo} alt="" className="logo1" />
           <img src={logo2} alt="" className="logo2" />
@@ -191,15 +197,15 @@ const Header = () => {
                   <GrMail />
                 </div>
 
-                <a href="mailto:wavesolutions024@gmail.com" target="_blank"><p>wavesolutions024@gmail.com</p></a>
-
+                <a href="mailto:wavesolutions024@gmail.com" target="_blank">
+                  <p>wavesolutions024@gmail.com</p>
+                </a>
               </a>
               <a class="mail">
                 <div class="icon">
                   <MdPhoneIphone />
                 </div>
                 <a class="phone" href="tel:+91 70289 97574">
-
                   <p>+91 70289 97574</p>
                 </a>
               </a>
@@ -208,22 +214,30 @@ const Header = () => {
                   <MdPhoneIphone />
                 </div>
                 <a class="phone" href="tel:+91 90969 15795">
-
                   <p>+91 90969 15795</p>
                 </a>
               </a>
             </div>
 
-            <div class="btn left_head_btn">
-              <div class="text">
-                Contact Us
-              </div>
-            </div>
+            <Link
+              to="/contact"
+              onClick={() => setHeaderOpen(false)}
+              class="btn left_head_btn"
+            >
+              <span class="text">Contact Us</span>
+            </Link>
           </div>
           <div className="right_nav_section" ref={navRef}>
             <div className="top">
               <div className="btn header_btn">
-                <Link to="/contact" class="text">Contact Us</Link>
+                <Link
+                  to="/contact"
+                  class="btn"
+                  onClick={() => setHeaderOpen(false)}
+                >
+                  {" "}
+                  <span class="text">Contact Us</span>{" "}
+                </Link>
               </div>
               <div className="hamburger" onClick={() => setHeaderOpen(false)}>
                 <RxCross2 />

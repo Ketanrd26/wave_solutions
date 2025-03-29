@@ -84,7 +84,7 @@
           width: 100%;
           animation: bouncing 5s linear infinite;
           display: block;
-          width: 100%;
+         
           // height: auto;
           transform-origin: center;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -183,6 +183,8 @@
       .first_text {
         .img {
           left: 48%;
+          width: 25% ;
+          height: auto !important;
         }
       }
     }
@@ -199,6 +201,7 @@
       .first_text {
         .img {
           left: 48%;
+          width: 30% ;
         }
       }
     }
@@ -212,7 +215,7 @@
   .grid-container {
     display: none;
     .text {
-      font-size: 50px;
+      font-size: 50px ;
       .first_text {
         .img {
           left: 25%;
