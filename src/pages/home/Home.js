@@ -9,7 +9,10 @@ import website from "../../assets/icons/web-design.png";
 import website_colred from "../../assets/icons/web-design_colred.png";
 import { FaArrowRight } from "react-icons/fa6";
 import video from "../../assets/ad.webm";
-import tp from "../../assets/tp.jpg";
+import moulees from "../../assets/moulees.jpg";
+import rohini from "../../assets/rohini_plastic.jpg";
+import shree from "../../assets/shree_dev.jpg";
+import gandhi from "../../assets/gandhi_travels.jpg";
 import { Link } from "react-router-dom";
 import Whychoose from "../../comps/choose/Whychoose";
 import HerosectionTwo from "../../comps/herosection2/HerosectionTwo";
@@ -45,28 +48,28 @@ const Home = () => {
 
   const projectData = [
     {
-      projectImage: tp,
+      projectImage: moulees,
       category: "Development",
       title: "Tattoo Website",
-      project_link: "",
+      project_link: "https://mouleestattooart.com/",
     },
     {
-      projectImage: tp,
+      projectImage: rohini,
       category: "Development",
       title: "Manufacured Website",
-      project_link: "",
+      project_link: "https://rohiniplastic.com/",
     },
     {
-      projectImage: tp,
+      projectImage: shree,
       category: "Development",
       title: "Ploting Developer CRM Software",
-      project_link: "",
+      project_link: "https://plot-soft-frontend.vercel.app/",
     },
     {
-      projectImage: tp,
+      projectImage: gandhi ,
       category: "Development",
       title: "Travellers Website",
-      project_link: "",
+      project_link: "https://gandhitravels.co.in/",
     },
   ];
   return (
@@ -174,10 +177,11 @@ const Home = () => {
           </h4>
           <div class="list">
             {projectData.map((item, index) => (
-              <Link
-                to={item.project_link}
+              <a
+                href={item.project_link}
                 class="card  bg-img-cover "
                 style={{ backgroundImage: `url(${item.projectImage})` }}
+                target="blank"
               >
                 <div class="content">
                   <div class="arrow">
@@ -186,7 +190,7 @@ const Home = () => {
                   <p>{item.category}</p>
                   <h5>{item.title}</h5>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
