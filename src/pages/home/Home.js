@@ -102,7 +102,7 @@ const Home = () => {
         <p>*Transofrm ideas into reality</p>
       </div> */}
 
-      <div class="about_us_parent bg-img-cover parent" id="about" >
+      <div class="about_us_parent bg-img-cover parent" id="about">
         <div class="about_us_cont cont">
           <div class="left">
             <div class="image bg-img-cover"></div>
@@ -119,10 +119,7 @@ const Home = () => {
             <p className="tag">get to know us</p>
             <h3 className="heading">The Best Digital Marketing Solutions</h3>
             <p className="content">
-              We help businesses grow with cutting-edge digital marketing
-              strategies, innovative web design, and powerful e-commerce
-              solutions. Our expert team is dedicated to crafting results-driven
-              campaigns that boost engagement, visibility, and sales.
+            We empower businesses with strategic digital marketing, stunning web designs, and high-performance eCommerce solutions. Our expert team crafts data-driven campaigns that enhance engagement, boost visibility, and drive sales.
             </p>
 
             <div class="list">
@@ -140,8 +137,9 @@ const Home = () => {
                 <div class="right_content">
                   <h3>Leading in Marketing</h3>
                   <p>
-                    We apply advanced marketing strategies to enhance brand
-                    presence and drive conversions effectively.
+                    We implement advanced digital marketing strategies,
+                    including SEO, social media marketing, and paid advertising,
+                    to increase brand presence and maximize conversions.
                   </p>
                 </div>
               </div>
@@ -159,8 +157,7 @@ const Home = () => {
                 <div class="right_content">
                   <h3>Creative Web Design</h3>
                   <p>
-                    We create stunning, user-friendly websites that leave a
-                    lasting impression and improve user experience.
+                  Our team builds visually appealing, user-friendly websites that enhance customer experience and ensure a strong digital footprint.
                   </p>
                 </div>
               </div>
@@ -169,7 +166,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="our_projects parent" id="projects" >
+      <div class="our_projects parent" id="projects">
         <div class="our_projects_cont">
           <h4>
             Explore our new recently <br />
