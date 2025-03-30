@@ -38,17 +38,17 @@ const Header = () => {
     },
     {
       link_name: "ABOUT",
-      link_path: "#about",
+      link_path: "/#about",
       desc: "Know more about Wave solutions",
     },
     {
       link_name: "PROJECTS",
-      link_path: "#projects",
+      link_path: "/#projects",
       desc: "Completed 10+ projects in 3 to 4 months",
     },
     {
       link_name: "SERVICES",
-      link_path: "#service",
+      link_path: "/#service",
       desc: "give proper service is our passion",
     },
     {
@@ -147,11 +147,31 @@ const Header = () => {
   ];
 
   const location = useLocation();
+
+  const handleNavigation = (e, linkPath) => {
+    if (linkPath.startsWith("/#")) {
+      e.preventDefault(); // Prevent full-page reload
+
+      const sectionId = linkPath.replace("/#", ""); // Extract section ID
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" }); // Scroll to section
+        setHeaderOpen(false);
+      }
+    } else {
+      setHeaderOpen(false); // Close header if it's a mobile menu
+      window.location.href = linkPath; // Navigate to other pages normally
+    }
+  };
+
   return (
     <>
       <div
         class={
-          headerActive || location.pathname === "/contact" || location.pathname === "/privacy"
+          headerActive ||
+          location.pathname === "/contact" ||
+          location.pathname === "/privacy"
             ? "header_parent parent active"
             : "header_parent parent"
         }
@@ -176,7 +196,7 @@ const Header = () => {
               {navLinks.map((item, index) => (
                 <div class="sections">
                   <a
-                    onClick={() => setHeaderOpen(false)}
+                    onClick={(e) => handleNavigation(e, item.link_path)}
                     className={
                       location.pathname === item.link_path
                         ? "active link"
@@ -187,6 +207,7 @@ const Header = () => {
                   >
                     {item.link_name}
                   </a>
+
                   <p className="desc">{item.desc}</p>
                 </div>
               ))}
@@ -229,16 +250,15 @@ const Header = () => {
           </div>
           <div className="right_nav_section" ref={navRef}>
             <div className="top">
-             
-                <Link
-                  to="/contact"
-                  className="btn"
-                  onClick={() => setHeaderOpen(false)}
-                >
-                  {" "}
-                  <span class="text">Contact Us</span>{" "}
-                </Link>
-              
+              <Link
+                to="/contact"
+                className="btn"
+                onClick={() => setHeaderOpen(false)}
+              >
+                {" "}
+                <span class="text">Contact Us</span>{" "}
+              </Link>
+
               <div className="hamburger" onClick={() => setHeaderOpen(false)}>
                 <RxCross2 />
               </div>
