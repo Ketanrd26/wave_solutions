@@ -51,11 +51,7 @@ const Header = () => {
       link_path: "/#service",
       desc: "give proper service is our passion",
     },
-    {
-      link_name: "BLOG",
-      link_path: "/blog",
-      desc: "reading some intresting things",
-    },
+
   ];
   const navRef = useRef(null);
   const linksRef = useRef([]);
@@ -171,7 +167,7 @@ const Header = () => {
         class={
           headerActive ||
           location.pathname === "/contact" ||
-          location.pathname === "/privacy"
+          location.pathname === "/privacy" || location.pathname === "/blogs"
             ? "header_parent parent active"
             : "header_parent parent"
         }
@@ -211,6 +207,23 @@ const Header = () => {
                   <p className="desc">{item.desc}</p>
                 </div>
               ))}
+
+              <div class="sections">
+                <Link
+                  onClick={() => setHeaderOpen(false)}
+                  className={
+                    location.pathname === "/blogs"
+                      ? "active link"
+                      : "link"
+                  }
+                 
+                  to="/blogs"
+                >
+                  BLOG
+                </Link>
+
+                <p className="desc">reading some intresting things</p>
+              </div>
             </div>
             <div class="contat_icons">
               <a class="mail">
