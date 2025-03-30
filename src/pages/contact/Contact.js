@@ -1,11 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.scss";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { Helmet } from "react-helmet";
+import { Modal } from "antd";
 const Contact = () => {
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+
+  function Submit(e) {
+    e.preventDefault();
+
+    setIsSubmitting(true); // Set submitting state to true
+
+    const formEle = document.querySelector("form");
+    const formDatab = new FormData(formEle);
+    const getDate = new Date();
+   
+    const date = getDate.toDateString()
+
+    console.log(date,"date")
+
+    formDatab.append("Date",date)
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbwGJ6JmsJhaS9goDhQBDlmtG3aKrPLraWSclDWA3tehk_d1tcL-gOeHW3E_zti4lznD/exec",
+      {
+        method: "POST",
+        body: formDatab,
+      }
+    )
+      .then((res) => res.text())
+      .then((data) => {
+        console.log(data);
+        setIsSubmitting(false); // Reset submitting state
+        showModal(); // Show success modal
+        formEle.reset(); // Reset the form
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setIsSubmitting(false); // Reset submitting state even on error
+        alert("Something went wrong. Please try again.");
+      });
+  }
+
   return (
     <>
 
@@ -31,16 +85,16 @@ const Contact = () => {
             </p>
           </div>
           <div class="social_media_icons">
-            <a href="">
+            <a href="https://www.instagram.com/wavesolutions2024?igsh=OGtmamFpY2k5Mjdl" target="_blank">
               <FaInstagram />
             </a>
-            <a href="">
+            <a href="https://x.com/WaveSolutions02" target="blank">
               <FaXTwitter />
             </a>
-            <a href="">
+            <a href="https://wa.me/+917028997574" target="blank">
               <FaWhatsapp />
             </a>
-            <a href="">
+            <a href="mailto:wavesolutions024@gmail.com" target="_blank">
               <IoMailOutline />
             </a>
           </div>
@@ -97,21 +151,37 @@ const Contact = () => {
             </div>
           </div>
           <div class="right">
-            <form action="" className="form">
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="text" placeholder="Contact Number" />
-              <input type="text" placeholder="Email Id" />
-              <textarea name="" id="" placeholder="Message"></textarea>
+            <form action="" className="form"  onSubmit={Submit} >
+              <input type="text" name="fName" placeholder="First Name" />
+              <input type="text" name="Lname" placeholder="Last Name" />
+              <input type="text" name="contact" placeholder="Contact Number" />
+              <input type="text"   name="email" placeholder="Email Id" />
+              <textarea name="message" id=""  placeholder="Message"></textarea>
               <div class="button_cp">
-                <button className="btn btn_list" type="submit">
-                  <div class="text">submit</div>
+                <button className="btn btn_list" type="submit" disabled={isSubmitting} >
+                  <div className ="text"> {isSubmitting ? "Submitting..." : "Submit"}</div>
                 </button>
               </div>
             </form>
           </div>
         </div>
       </div>
+
+      <Modal
+        title="Success"
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={null}
+      >
+        <p>Your message has been sent successfully!</p>
+        <button
+          className="btn-activated green-btn"
+          onClick={handleOk}
+        >
+          <div className="btn_text" style={{ fontSize: "20px" }}>OK</div>
+        </button>
+      </Modal>
     </>
   );
 };

@@ -138,7 +138,7 @@ const Header = () => {
     },
     {
       icons: <FaWhatsapp />,
-      linke: "tel:+91 70289 97574",
+      linke: "https://wa.me/+917028997574",
     },
     {
       icons: <GrMail />,
@@ -151,7 +151,7 @@ const Header = () => {
     <>
       <div
         class={
-          headerActive || location.pathname === "/contact"
+          headerActive || location.pathname === "/contact" || location.pathname === "/privacy"
             ? "header_parent parent active"
             : "header_parent parent"
         }
@@ -229,16 +229,16 @@ const Header = () => {
           </div>
           <div className="right_nav_section" ref={navRef}>
             <div className="top">
-              <div className="btn header_btn">
+             
                 <Link
                   to="/contact"
-                  class="btn"
+                  className="btn"
                   onClick={() => setHeaderOpen(false)}
                 >
                   {" "}
                   <span class="text">Contact Us</span>{" "}
                 </Link>
-              </div>
+              
               <div className="hamburger" onClick={() => setHeaderOpen(false)}>
                 <RxCross2 />
               </div>

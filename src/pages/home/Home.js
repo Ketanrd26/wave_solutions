@@ -217,11 +217,11 @@ const Home = () => {
             Our <span>Clients</span>
           </h2>
           <div class="list">
-            <img src={logo1} className="logo" alt="" />
-            <img src={logo2} className="logo" alt="" />
-            <img src={logo3} className="logo" alt="" />
-            <img src={logo4} className="logo" alt="" />
-            <img src={logo5} className="logo" alt="" />
+          <a href="https://mouleestattooart.com/" target="blank">  <img src={logo1} className="logo" alt="" /></a>
+         <a href="https://gandhitravels.co.in/"  target="blank" >   <img src={logo2} className="logo" alt="" /></a>
+            <a href="https://rohiniplastic.com/" target="blank" ><img src={logo3} className="logo" alt="" /></a>
+            <a href="https://www.parmeshwarkumar.com/" target="blank" ><img src={logo4} className="logo" alt="" /></a>
+           <a href="#"> <img src={logo5} className="logo" alt="" /></a>
 
             {/* <div class="logo"></div>
             <div class="logo"></div> */}

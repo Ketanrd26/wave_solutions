@@ -473,11 +473,18 @@
       align-items: center;
       gap: var(--unit);
       flex-wrap: wrap;
-      .logo {
-        width: 200px;
-        height: auto;
-        // background-color: red;
+     
 
+      a{
+        width: 200px;
+        .logo {
+          width: 100%;
+          height: auto;
+          // background-color: red;
+  
+  
+         
+        }
 
         &:nth-child(5){
           width: 100px;
