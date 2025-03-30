@@ -22,6 +22,7 @@ import logo2 from "../../assets/gandhi_travels.png";
 import logo3 from "../../assets/rohini_platsic.webp";
 import logo4 from "../../assets/parmeshwar.webp";
 import logo5 from "../../assets/shree_logo.png";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const videoRef = useRef();
@@ -74,6 +75,20 @@ const Home = () => {
   ];
   return (
     <>
+<Helmet>
+  <title>Wave Solutions - Best Digital Marketing Agency & Software Company</title>
+  <meta
+    name="description"
+    content="Wave Solutions offers top-notch digital marketing and software development services. Elevate your business with SEO, PPC, web design, mobile apps, and more."
+  />
+  <meta
+    name="keywords"
+    content="digital marketing agency, best digital marketing agency in pune, SEO services, PPC advertising, social media marketing, web development, mobile app development, branding solutions, UI/UX design, e-commerce solutions, software development company"
+  />
+  <link rel="canonical" href="https://wavesolutions.in/" />
+</Helmet>
+
+
       <HerosectionTwo />
       <Herosection />
       <div class="video_section parent">

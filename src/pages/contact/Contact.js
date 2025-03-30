@@ -4,9 +4,24 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
+import { Helmet } from "react-helmet";
 const Contact = () => {
   return (
     <>
+
+<Helmet>
+  <title>Contact Wave Solutions - Best Digital Marketing Agency in India</title>
+  <meta
+    name="description"
+    content="Get in touch with Wave Solutions, the best digital marketing agency in India. Let's discuss how we can grow your business with SEO, PPC, social media, and web development."
+  />
+  <meta
+    name="keywords"
+    content="digital marketing agency, best digital marketing agency, best digital marketing agency in India, digital marketing agency near me, best digital marketing agency in Pune"
+  />
+  <link rel="canonical" href="https://wavesolutions.in/contact" />
+</Helmet>
+
       <div class="contact_parent parent">
         <div class="contact_cont cont">
           <div class="top_section">
