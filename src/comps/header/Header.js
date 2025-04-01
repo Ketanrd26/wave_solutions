@@ -265,7 +265,7 @@ const Header = () => {
             <div className="top">
               <Link
                 to="/contact"
-                className="btn"
+                className="btn right_head_btn"
                 onClick={() => setHeaderOpen(false)}
               >
                 {" "}
