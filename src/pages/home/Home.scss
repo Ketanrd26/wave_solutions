@@ -522,6 +522,7 @@
       justify-content: center;
       align-items: center;
       gap: var(--unit);
+      flex-wrap: wrap;
 
       .blog_card {
         width: 350px;

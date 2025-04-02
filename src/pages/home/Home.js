@@ -280,7 +280,7 @@ const Home = () => {
                   <h2>{item.title.rendered}</h2>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: item.excerpt.rendered.slice(0, 200),
+                      __html: item.excerpt.rendered.slice(0, 100),
                     }}
                   ></p>
                 </div>
