@@ -535,6 +535,7 @@
         align-items: center;
         cursor: pointer;
         border: 1px solid rgb(185, 185, 185);
+        color: black;
 
         .image_section {
           width: 100%;
@@ -581,7 +582,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
           gap: calc(var(--unit) / 2);
           padding: var(--unit);
 

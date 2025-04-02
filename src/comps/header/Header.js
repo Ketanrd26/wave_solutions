@@ -167,7 +167,7 @@ const Header = () => {
         class={
           headerActive ||
           location.pathname === "/contact" ||
-          location.pathname === "/privacy" || location.pathname === "/blogs"
+          location.pathname === "/privacy" || location.pathname === "/articles" || location.pathname === "/BlogView"
             ? "header_parent parent active"
             : "header_parent parent"
         }
@@ -217,7 +217,7 @@ const Header = () => {
                       : "link"
                   }
                  
-                  to="/blogs"
+                  to="/articles"
                 >
                   BLOG
                 </Link>

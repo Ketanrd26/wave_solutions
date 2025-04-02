@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Herosection from "../../comps/herosection/Herosection";
 import TwoCol from "../../comps/two_col/TwoCol";
 import "./Home.scss";
@@ -23,9 +23,22 @@ import logo3 from "../../assets/rohini_platsic.webp";
 import logo4 from "../../assets/parmeshwar.webp";
 import logo5 from "../../assets/shree_logo.png";
 import { Helmet } from "react-helmet";
+import { fetchBlogs } from "../../api";
 
 const Home = () => {
   const videoRef = useRef();
+  const [latestBlogs, setLatestBlogs] = useState([]);
+
+  useEffect(() => {
+    fetchBlogs()
+      .then((data) => {
+        console.log(data);
+        setLatestBlogs(data.reverse().slice(0, 3));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   useEffect(() => {
     gsap.fromTo(
@@ -67,7 +80,7 @@ const Home = () => {
       project_link: "https://plot-soft-frontend.vercel.app/",
     },
     {
-      projectImage: gandhi ,
+      projectImage: gandhi,
       category: "Development",
       title: "Travellers Website",
       project_link: "https://gandhitravels.co.in/",
@@ -75,19 +88,20 @@ const Home = () => {
   ];
   return (
     <>
-<Helmet>
-  <title>Wave Solutions - Best Digital Marketing Agency & Software Company</title>
-  <meta
-    name="description"
-    content="Wave Solutions offers top-notch digital marketing and software development services. Elevate your business with SEO, PPC, web design, mobile apps, and more."
-  />
-  <meta
-    name="keywords"
-    content="digital marketing agency, best digital marketing agency in pune, SEO services, PPC advertising, social media marketing, web development, mobile app development, branding solutions, UI/UX design, e-commerce solutions, software development company"
-  />
-  <link rel="canonical" href="https://wavesolutions.in/" />
-</Helmet>
-
+      <Helmet>
+        <title>
+          Wave Solutions - Best Digital Marketing Agency & Software Company
+        </title>
+        <meta
+          name="description"
+          content="Wave Solutions offers top-notch digital marketing and software development services. Elevate your business with SEO, PPC, web design, mobile apps, and more."
+        />
+        <meta
+          name="keywords"
+          content="digital marketing agency, best digital marketing agency in pune, SEO services, PPC advertising, social media marketing, web development, mobile app development, branding solutions, UI/UX design, e-commerce solutions, software development company"
+        />
+        <link rel="canonical" href="https://wavesolutions.in/" />
+      </Helmet>
 
       <HerosectionTwo />
       <Herosection />
@@ -137,7 +151,10 @@ const Home = () => {
             <p className="tag">get to know us</p>
             <h3 className="heading">The Best Digital Marketing Solutions</h3>
             <p className="content">
-            We empower businesses with strategic digital marketing, stunning web designs, and high-performance eCommerce solutions. Our expert team crafts data-driven campaigns that enhance engagement, boost visibility, and drive sales.
+              We empower businesses with strategic digital marketing, stunning
+              web designs, and high-performance eCommerce solutions. Our expert
+              team crafts data-driven campaigns that enhance engagement, boost
+              visibility, and drive sales.
             </p>
 
             <div class="list">
@@ -175,7 +192,9 @@ const Home = () => {
                 <div class="right_content">
                   <h3>Creative Web Design</h3>
                   <p>
-                  Our team builds visually appealing, user-friendly websites that enhance customer experience and ensure a strong digital footprint.
+                    Our team builds visually appealing, user-friendly websites
+                    that enhance customer experience and ensure a strong digital
+                    footprint.
                   </p>
                 </div>
               </div>
@@ -217,11 +236,24 @@ const Home = () => {
             Our <span>Clients</span>
           </h2>
           <div class="list">
-          <a href="https://mouleestattooart.com/" target="blank">  <img src={logo1} className="logo" alt="" /></a>
-         <a href="https://gandhitravels.co.in/"  target="blank" >   <img src={logo2} className="logo" alt="" /></a>
-            <a href="https://rohiniplastic.com/" target="blank" ><img src={logo3} className="logo" alt="" /></a>
-            <a href="https://www.parmeshwarkumar.com/" target="blank" ><img src={logo4} className="logo" alt="" /></a>
-           <a href="#"> <img src={logo5} className="logo" alt="" /></a>
+            <a href="https://mouleestattooart.com/" target="blank">
+              {" "}
+              <img src={logo1} className="logo" alt="" />
+            </a>
+            <a href="https://gandhitravels.co.in/" target="blank">
+              {" "}
+              <img src={logo2} className="logo" alt="" />
+            </a>
+            <a href="https://rohiniplastic.com/" target="blank">
+              <img src={logo3} className="logo" alt="" />
+            </a>
+            <a href="https://www.parmeshwarkumar.com/" target="blank">
+              <img src={logo4} className="logo" alt="" />
+            </a>
+            <a href="#">
+              {" "}
+              <img src={logo5} className="logo" alt="" />
+            </a>
 
             {/* <div class="logo"></div>
             <div class="logo"></div> */}
@@ -239,24 +271,32 @@ const Home = () => {
           </h2>
 
           <div class="blog_list">
-            <div class="blog_card">
-              <div class="image_section">
-                <div class="image bg-img-cover"></div>
-              </div>
-              <div class="content_section">
-                <h2>Five ways that can develop your business website</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusantium, necessitatibus. Labore molestiae facilis suscipit
-                  Accusantium, necessitatibus. Labore molestiae facilis suscipit
-                </p>
-              </div>
-              <div class="bottom">
-                <p>Read more</p>
-                <div class="arrow_btn"></div>
-              </div>
-            </div>
+            {latestBlogs.map((item, index) => (
+              <Link to={`/BlogView?slug=${item.slug}`} key={index}class="blog_card">
+                <div class="image_section">
+                  <div class="image bg-img-cover"  style={{backgroundImage:`url(${item._embedded["wp:featuredmedia"][0].source_url})`}} ></div>
+                </div>
+                <div class="content_section">
+                  <h2>{item.title.rendered}</h2>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: item.excerpt.rendered.slice(0, 200),
+                    }}
+                  ></p>
+                </div>
+                <div class="bottom">
+                  <p>Read more</p>
+                  <div class="arrow_btn"></div>
+                </div>
+              </Link>
+            ))}
           </div>
+
+          <Link to="/articles" class="btn">
+            <div class="text">
+              Know More Articles
+            </div>
+          </Link>
         </div>
       </div>
     </>

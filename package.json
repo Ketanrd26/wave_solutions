@@ -5,6 +5,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "antd": "^5.24.5",
+    "axios": "^1.8.4",
     "cra-template": "1.2.0",
     "gsap": "^3.12.5",
     "helmet": "^8.1.0",

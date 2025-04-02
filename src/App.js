@@ -9,6 +9,7 @@ import ScrollToTop from "./comps/scrolltotop/ScrollToTop";
 import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import Blog from "./pages/blogs/Blog";
+import BlogView from "./pages/blogView/BlogView";
 function App() {
 
   ReactGA.initialize("G-C7MTQ781QQ");
@@ -42,7 +43,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/blogs" element={<Blog />} />
+          <Route path="/articles" element={<Blog />} />
+          <Route path="/BlogView" element={<BlogView />} />
         </Routes>
         <Footer/>
       </BrowserRouter>

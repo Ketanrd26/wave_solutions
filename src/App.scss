@@ -126,11 +126,11 @@ a {
 
   &:hover {
     &::after {
-      transform: scale(4) rotate(30deg);
+      transform: scale(5) rotate(30deg);
     }
 
     .text {
-      color: white;
+      color: white !important;
     }
   }
 }
