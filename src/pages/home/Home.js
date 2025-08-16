@@ -22,6 +22,7 @@ import logo2 from "../../assets/gandhi_travels.png";
 import logo3 from "../../assets/rohini_platsic.webp";
 import logo4 from "../../assets/parmeshwar.webp";
 import logo5 from "../../assets/shree_logo.png";
+import logo6 from "../../assets/mediverge_logo.png"
 import { Helmet } from "react-helmet";
 import { fetchBlogs } from "../../api";
 
@@ -85,6 +86,7 @@ const Home = () => {
       title: "Travellers Website",
       project_link: "https://gandhitravels.co.in/",
     },
+   
   ];
   return (
     <>
@@ -249,6 +251,9 @@ const Home = () => {
             </a>
             <a href="https://www.parmeshwarkumar.com/" target="blank">
               <img src={logo4} className="logo" alt="" />
+            </a>
+            <a href="https://medivergehealthcare.com/" target="blank">
+              <img src={logo6} className="logo" alt="" style={{width: "250px"}} />
             </a>
             <a href="#">
               {" "}
