@@ -22,6 +22,11 @@ import logo2 from "../../assets/gandhi_travels.png";
 import logo3 from "../../assets/rohini_platsic.webp";
 import logo4 from "../../assets/parmeshwar.webp";
 import logo5 from "../../assets/shree_logo.png";
+import tara from "../../assets/tara.png";
+import gosarathi from "../../assets/go_sarathi.png";
+import gpkirmiti from "../../assets/gp_kirmiri.jpeg";
+import pandit from "../../assets/pandit_jewellers.png";
+import maid from "../../assets/maid.png";
 import { Helmet } from "react-helmet";
 import { fetchBlogs } from "../../api";
 
@@ -254,6 +259,27 @@ const Home = () => {
               {" "}
               <img src={logo5} className="logo" alt="" />
             </a>
+            <a href="https://tarainterior.com/" target="blank">
+              {" "}
+              <img src={tara} className="logo" alt="" />
+            </a>
+            <a href="https://gosarathi.com/" target="blank">
+              {" "}
+              <img src={gosarathi} className="logo" alt="" />
+            </a>
+            <a href="https://gpkirmitibharkas.com/" target="blank">
+              {" "}
+              <img src={gpkirmiti} className="logo" alt="" />
+            </a>
+            <a href="#">
+              {" "}
+              <img src={pandit} className="logo" alt="" />
+            </a>
+            <a href="#">
+              {" "}
+              <img src={maid} className="logo" alt="" />
+            </a>
+            
 
             {/* <div class="logo"></div>
             <div class="logo"></div> */}
