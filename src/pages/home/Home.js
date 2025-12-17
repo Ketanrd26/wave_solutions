@@ -258,7 +258,7 @@ const Home = () => {
               <img src={logo4} className="logo" alt="" />
             </a>
             <a href="https://medivergehealthcare.com/" target="blank">
-              <img src={logo6} className="logo" alt="" style={{width: "250px"}} />
+              <img src={logo6} className="logo" alt=""  />
             </a>
             <a href="#">
               {" "}
