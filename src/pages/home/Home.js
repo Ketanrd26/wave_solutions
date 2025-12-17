@@ -27,6 +27,7 @@ import gosarathi from "../../assets/go_sarathi.png";
 import gpkirmiti from "../../assets/gp_kirmiri.jpeg";
 import pandit from "../../assets/pandit_jewellers.png";
 import maid from "../../assets/maid.png";
+import logo6 from "../../assets/mediverge_logo.png"
 import { Helmet } from "react-helmet";
 import { fetchBlogs } from "../../api";
 
@@ -90,6 +91,7 @@ const Home = () => {
       title: "Travellers Website",
       project_link: "https://gandhitravels.co.in/",
     },
+   
   ];
   return (
     <>
@@ -254,6 +256,9 @@ const Home = () => {
             </a>
             <a href="https://www.parmeshwarkumar.com/" target="blank">
               <img src={logo4} className="logo" alt="" />
+            </a>
+            <a href="https://medivergehealthcare.com/" target="blank">
+              <img src={logo6} className="logo" alt="" style={{width: "250px"}} />
             </a>
             <a href="#">
               {" "}
