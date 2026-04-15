@@ -3,5 +3,23 @@
         "activityBar.background": "#5D023A",
         "titleBar.activeBackground": "#820351",
         "titleBar.activeForeground": "#FFFBFD"
-    }
+    },
+
+    "emmet.triggerExpansionOnTab": true,
+
+    "emmet.includeLanguages": {
+        "javascript": "html",
+        "javascriptreact": "html"
+    },
+
+    "emmet.showExpandedAbbreviation": "never",
+
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.inlineSuggest.enabled": true
 }

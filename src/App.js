@@ -10,6 +10,7 @@ import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import Blog from "./pages/blogs/Blog";
 import BlogView from "./pages/blogView/BlogView";
+import Clients from "./pages/clients/Clients";
 function App() {
 
   ReactGA.initialize("G-C7MTQ781QQ");
@@ -45,6 +46,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/articles" element={<Blog />} />
           <Route path="/BlogView" element={<BlogView />} />
+          <Route path="/Clients" element={<Clients />} />
         </Routes>
         <Footer/>
       </BrowserRouter>

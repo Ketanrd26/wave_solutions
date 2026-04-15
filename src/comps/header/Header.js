@@ -46,6 +46,7 @@ const Header = () => {
       link_path: "/#projects",
       desc: "Completed 10+ projects in 3 to 4 months",
     },
+
     {
       link_name: "SERVICES",
       link_path: "/#service",
@@ -167,7 +168,7 @@ const Header = () => {
         class={
           headerActive ||
           location.pathname === "/contact" ||
-          location.pathname === "/privacy" || location.pathname === "/articles" || location.pathname === "/BlogView"
+          location.pathname === "/privacy" || location.pathname === "/articles" || location.pathname === "/BlogView" || location.pathname === "/Clients"
             ? "header_parent parent active"
             : "header_parent parent"
         }
@@ -208,6 +209,22 @@ const Header = () => {
                 </div>
               ))}
 
+              <div class="sections">
+                <Link
+                  onClick={() => setHeaderOpen(false)}
+                  className={
+                    location.pathname === "/Clients"
+                      ? "active link"
+                      : "link"
+                  }
+                 
+                  to="/Clients"
+                >
+                  CLIENTS
+                </Link>
+ 
+                <p className="desc">reading some intresting things</p>
+              </div>
               <div class="sections">
                 <Link
                   onClick={() => setHeaderOpen(false)}
