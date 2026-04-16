@@ -46,6 +46,7 @@
       justify-content: center;
       align-items: center;
       gap: var(--unit);
+      flex-wrap: wrap;
 
       .tab {
         padding: 4px 8px;
@@ -74,7 +75,7 @@
         gap: calc(var(--unit) + 5px);
 
         .web {
-          width: calc(100% / 4 - var(--unit));
+          width: 300px;
           aspect-ratio: 9/16;
           display: flex;
           justify-content: flex-end;
@@ -101,6 +102,111 @@
             // object-fit: cover;
           }
         }
+      }
+
+      .social_media{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--unit);
+
+        .sm{
+          width: 300px;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid var(--light-grey);
+          gap: var(--unit);
+
+          .content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: calc(var(--unit) / 2);
+            box-shadow: var(--shadow);
+            padding: 8px ;
+          }
+
+
+        .image{
+          width: 100%;
+          height: auto;
+          padding: 8px;
+
+            img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+        }
+      }
+
+      .web_apps{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--unit);
+
+        .wa{
+          width: 300px;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: var(--unit);
+          border: 1px solid var(--light-grey);
+
+          .image{
+            width: 100%;
+            height: auto;
+            padding: 8px;
+            
+            img{
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+
+          .content{
+            width: 100%;
+            padding: 8px 0px;
+            background-color: var(--white);
+            text-align: center;
+            box-shadow: var(--shadow);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width:700px){
+  .client_pagetop{
+    .clinet_pt_cont{
+      h1{
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width:400px){
+ .client_pagetop{
+    .clinet_pt_cont{
+      h1{
+        font-size: 25px;
       }
     }
   }

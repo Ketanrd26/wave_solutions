@@ -8,8 +8,20 @@ import gs_web from "../../assets/web_cl/go_sarathi_web.png";
 import medi_web from "../../assets/web_cl/medi_web.png";
 import tara_web from "../../assets/web_cl/tara_web.png";
 
+// social media
+import srp from "../../assets/pandit_jewellers.png";
+import maid from "../../assets/maid.png";
+import dhantirth from "../../assets/dhantirht.png";
+import hotel_kasturi from "../../assets/kasturi.png";
+import maid_urban from "../../assets/maid_urban.png";
+
+// web apps
+import shree from "../../assets/shree_logo.png";
+import jb from "../../assets/jb.png";
+import gov from "../../assets/gov.webp"
+
 const Clients = () => {
-  const [clientsTab, setClientsTab] = useState("Website");
+  const [clientsTab, setClientsTab] = useState("Web Apps");
 
   const services = [
     {
@@ -54,12 +66,63 @@ const Clients = () => {
     },
     {
       name: "Social Media",
+      children: [
+        {
+          image: srp,
+          name: "S.R. Pandit Jewellers",
+          link: "https://www.instagram.com/s.r.pandit_jewellers?igsh=MWRjaGxkeWl6M2pyaA%3D%3D",
+        },
+        {
+          image: maid,
+          name: "Maid Jewellers",
+          link: "https://www.instagram.com/maidjewellers.mjk?igsh=MXZoc3VsbTV4ejhiZA%3D%3D",
+        },
+        {
+          image: dhantirth,
+          name: "Dhantirth Chits Pvt. Ltd.",
+          link: "https://www.instagram.com/dhantirthchits?igsh=dTN4eXdldzdkZGhn",
+        },
+        {
+          image: hotel_kasturi,
+          name: "Hotel Kasturi",
+          link: "https://www.instagram.com/hotel___kasturi___?igsh=MWliNG50M3AxdWVhNQ%3D%3D",
+        },
+        {
+          image: maid_urban,
+          name: "Maid Urban Co-operative Society",
+          link: "https://www.instagram.com/maid_urban?igsh=ejdrMzh5aWV3N2F6",
+        },
+      ],
     },
     {
       name: "Web Apps",
+      children: [
+        {
+          image: srp,
+          name: "Pj Omunim",
+        },
+        {
+          image: shree,
+          name: "Ploting Developer Crm",
+        },
+        {
+          image: jb,
+          name: "JungleBoosh E-commerce",
+        },
+      ],
     },
     {
       name: "Mobile Apps",
+      children:[
+        {
+          image:srp,
+          name:"Jewellery Catalogue App",
+        },
+        {
+          image:gov,
+          name:"Gram panchayat ajani app",
+        },
+      ]
     },
   ];
   return (
@@ -99,13 +162,65 @@ const Clients = () => {
                     <div className="web" key={index}>
                       <img src={child.image} alt={child.name} />
                       <div className="content">
-                        <h3>
-                          {child.name}
-                        </h3>
-                        <a href={child.link} target="blank" >
+                        <h3>{child.name}</h3>
+                        <a href={child.link} target="blank">
                           click here to visit
                         </a>
-                        </div>{" "}
+                      </div>{" "}
+                    </div>
+                  ))}
+              </div>
+            )}
+
+            {clientsTab === "Social Media" && (
+              <div className="social_media">
+                {services
+                  .find((item) => item.name === "Social Media")
+                  ?.children?.map((child, index) => (
+                    <div className="sm">
+                      <div className="image">
+                        <img src={child.image} alt={child.name} />
+                      </div>
+                      <div className="content">
+                        <h3>{child.name}</h3>
+                        <a href={child.link} target="blank">
+                          click here to visit
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                <div></div>
+              </div>
+            )}
+
+            {clientsTab === "Web Apps" && (
+              <div className="web_apps">
+                {services
+                  .find((item) => item.name === "Web Apps")
+                  ?.children?.map((child, index) => (
+                    <div className="wa" key={index}>
+                      <div className="image">
+                        <img src={child.image} alt={child.name} />
+                      </div>
+                      <div className="content">
+                        <h3>{child.name}</h3>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            )}
+            {clientsTab === "Mobile Apps" && (
+              <div className="web_apps">
+                {services
+                  .find((item) => item.name === "Mobile Apps")
+                  ?.children?.map((child, index) => (
+                    <div className="wa" key={index}>
+                      <div className="image">
+                        <img src={child.image} alt={child.name} />
+                      </div>
+                      <div className="content">
+                        <h3>{child.name}</h3>
+                      </div>
                     </div>
                   ))}
               </div>
