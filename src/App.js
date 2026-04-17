@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import Blog from "./pages/blogs/Blog";
 import BlogView from "./pages/blogView/BlogView";
 import Clients from "./pages/clients/Clients";
+import About from "./pages/about/About";
 function App() {
 
   ReactGA.initialize("G-C7MTQ781QQ");
@@ -43,6 +44,7 @@ function App() {
          
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/articles" element={<Blog />} />
           <Route path="/BlogView" element={<BlogView />} />

@@ -27,9 +27,16 @@ import gosarathi from "../../assets/go_sarathi.png";
 import gpkirmiti from "../../assets/gp_kirmiri.jpeg";
 import pandit from "../../assets/pandit_jewellers.png";
 import maid from "../../assets/maid.png";
-import logo6 from "../../assets/mediverge_logo.png"
+import logo6 from "../../assets/mediverge_logo.png";
 import { Helmet } from "react-helmet";
 import { fetchBlogs } from "../../api";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
 
 const Home = () => {
   const videoRef = useRef();
@@ -62,7 +69,7 @@ const Home = () => {
           end: "bottom bottom",
           scrub: true,
         },
-      }
+      },
     );
   }, []);
 
@@ -91,7 +98,6 @@ const Home = () => {
       title: "Travellers Website",
       project_link: "https://gandhitravels.co.in/",
     },
-   
   ];
   return (
     <>
@@ -242,53 +248,80 @@ const Home = () => {
           <h2>
             Our <span>Clients</span>
           </h2>
-          <div class="list">
-            <a href="https://mouleestattooart.com/" target="blank">
+
+          <Swiper
+            slidesPerView={10}
+            spaceBetween={40}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            breakpoints={{
+          350: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          640: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+          },
+          800: {
+            slidesPerView: 8,
+            spaceBetween: 40,
+          },
+          1100: {
+            slidesPerView: 10,
+            spaceBetween: 40,
+          },
+        }}
+            className="mySwiper"
+          >
+            <SwiperSlide>
               {" "}
               <img src={logo1} className="logo" alt="" />
-            </a>
-            <a href="https://gandhitravels.co.in/" target="blank">
+            </SwiperSlide>
+            <SwiperSlide>
               {" "}
               <img src={logo2} className="logo" alt="" />
-            </a>
-            <a href="https://rohiniplastic.com/" target="blank">
-              <img src={logo3} className="logo" alt="" />
-            </a>
-            <a href="https://www.parmeshwarkumar.com/" target="blank">
-              <img src={logo4} className="logo" alt="" />
-            </a>
-            <a href="https://medivergehealthcare.com/" target="blank">
-              <img src={logo6} className="logo" alt=""  />
-            </a>
-            <a href="#">
+            </SwiperSlide>
+            <SwiperSlide>
               {" "}
+              <img src={logo3} className="logo" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <img src={logo4} className="logo" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
               <img src={logo5} className="logo" alt="" />
-            </a>
-            <a href="https://tarainterior.com/" target="blank">
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <img src={logo6} className="logo" alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
               {" "}
               <img src={tara} className="logo" alt="" />
-            </a>
-            <a href="https://gosarathi.com/" target="blank">
+            </SwiperSlide>
+            <SwiperSlide>
               {" "}
               <img src={gosarathi} className="logo" alt="" />
-            </a>
-            <a href="https://gpkirmitibharkas.com/" target="blank">
+            </SwiperSlide>
+            <SwiperSlide>
               {" "}
               <img src={gpkirmiti} className="logo" alt="" />
-            </a>
-            <a href="#">
+            </SwiperSlide>
+            <SwiperSlide>
               {" "}
               <img src={pandit} className="logo" alt="" />
-            </a>
-            <a href="#">
+            </SwiperSlide>
+            <SwiperSlide>
               {" "}
               <img src={maid} className="logo" alt="" />
-            </a>
-            
-
-            {/* <div class="logo"></div>
-            <div class="logo"></div> */}
-          </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
 
@@ -303,9 +336,18 @@ const Home = () => {
 
           <div class="blog_list">
             {latestBlogs.map((item, index) => (
-              <Link to={`/BlogView?slug=${item.slug}`} key={index}class="blog_card">
+              <Link
+                to={`/BlogView?slug=${item.slug}`}
+                key={index}
+                class="blog_card"
+              >
                 <div class="image_section">
-                  <div class="image bg-img-cover"  style={{backgroundImage:`url(${item._embedded["wp:featuredmedia"][0].source_url})`}} ></div>
+                  <div
+                    class="image bg-img-cover"
+                    style={{
+                      backgroundImage: `url(${item._embedded["wp:featuredmedia"][0].source_url})`,
+                    }}
+                  ></div>
                 </div>
                 <div class="content_section">
                   <h2>{item.title.rendered}</h2>
@@ -324,9 +366,7 @@ const Home = () => {
           </div>
 
           <Link to="/articles" class="btn">
-            <div class="text">
-              Know More Articles
-            </div>
+            <div class="text">Know More Articles</div>
           </Link>
         </div>
       </div>

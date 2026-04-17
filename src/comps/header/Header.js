@@ -38,7 +38,7 @@ const Header = () => {
     },
     {
       link_name: "ABOUT",
-      link_path: "/#about",
+      link_path: "/about",
       desc: "Know more about Wave solutions",
     },
     {
@@ -162,13 +162,21 @@ const Header = () => {
     }
   };
 
+  const links = [
+    "/contact",
+    "/privacy",
+    "/articles",
+    "/BlogView",
+    "/Clients",
+    "/about"
+  ]
+
   return (
     <>
       <div
         class={
           headerActive ||
-          location.pathname === "/contact" ||
-          location.pathname === "/privacy" || location.pathname === "/articles" || location.pathname === "/BlogView" || location.pathname === "/Clients"
+          location.pathname === links.find((link) => link === location.pathname)
             ? "header_parent parent active"
             : "header_parent parent"
         }
@@ -192,7 +200,7 @@ const Header = () => {
             <div class="list">
               {navLinks.map((item, index) => (
                 <div class="sections">
-                  <a
+                  <Link
                     onClick={(e) => handleNavigation(e, item.link_path)}
                     className={
                       location.pathname === item.link_path
@@ -200,10 +208,10 @@ const Header = () => {
                         : "link"
                     }
                     key={index}
-                    href={item.link_path}
+                    to={item.link_path}
                   >
                     {item.link_name}
-                  </a>
+                  </Link>
 
                   <p className="desc">{item.desc}</p>
                 </div>
